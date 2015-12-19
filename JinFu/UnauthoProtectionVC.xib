@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnauthoProtectionVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beijing-daoshuaaozhang.png" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-WL-fYB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="lnM-qF-mRu"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoshaubaozhang-tubiao.png" translatesAutoresizingMaskIntoConstraints="NO" id="ohq-z8-VGl">
+                    <rect key="frame" x="111" y="32" width="98" height="98"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="98" id="Hhc-PX-Ufq"/>
+                        <constraint firstAttribute="width" constant="98" id="Qjl-z9-PjC"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iRZ-IF-cmb">
+                    <rect key="frame" x="8" y="172" width="304" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="5jh-rg-5sa"/>
+                    </constraints>
+                    <string key="text">通过大屏幕演示，李彦宏现场讲解了百度无人驾驶车的技术储备、路测实况、行业突破等内容。
+
+　　百度无人驾驶车于本月上旬在国内首次实现城市、环路及高速道路混合路况下的全自动驾驶。随后，百度公司宣布成立自动驾驶事业部，聚焦技术研发、生态建设与产业落地，加快研发普通城市道路的无人驾驶技术，计划三年商用化，五年实现量产。
+
+</string>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="mij-2s-AWn">
+                    <rect key="frame" x="43" y="401" width="235" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="cvu-Xj-hDl"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDf-eG-yaI">
+                    <rect key="frame" x="43" y="401" width="235" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="HvH-AJ-RYD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buyServiceBtnClick:" destination="-1" eventType="touchUpInside" id="Nwj-nZ-LgJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mij-2s-AWn" secondAttribute="trailing" constant="42" id="79O-Kh-74A"/>
+                <constraint firstItem="iRZ-IF-cmb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="9h2-Xa-cv3"/>
+                <constraint firstItem="LB5-WL-fYB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B3l-Wr-m2g"/>
+                <constraint firstItem="iRZ-IF-cmb" firstAttribute="top" secondItem="LB5-WL-fYB" secondAttribute="bottom" constant="12" id="DOu-ck-Stg"/>
+                <constraint firstItem="mij-2s-AWn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="43" id="F0P-UZ-wQa"/>
+                <constraint firstAttribute="trailing" secondItem="LB5-WL-fYB" secondAttribute="trailing" id="QGe-Nr-ERT"/>
+                <constraint firstItem="LB5-WL-fYB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QNm-Gh-GJh"/>
+                <constraint firstAttribute="trailing" secondItem="iRZ-IF-cmb" secondAttribute="trailing" constant="8" id="Tdb-G6-4d1"/>
+                <constraint firstItem="ohq-z8-VGl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="WIh-fy-4H3"/>
+                <constraint firstItem="xDf-eG-yaI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="43" id="WsK-Ll-vf5"/>
+                <constraint firstItem="ohq-z8-VGl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XpP-di-VO9"/>
+                <constraint firstItem="xDf-eG-yaI" firstAttribute="top" secondItem="iRZ-IF-cmb" secondAttribute="bottom" constant="29" id="bWA-sh-fq0"/>
+                <constraint firstItem="mij-2s-AWn" firstAttribute="top" secondItem="iRZ-IF-cmb" secondAttribute="bottom" constant="29" id="qMi-Kw-dK1"/>
+                <constraint firstAttribute="trailing" secondItem="xDf-eG-yaI" secondAttribute="trailing" constant="42" id="so0-Bk-Vrm"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="beijing-daoshuaaozhang.png" width="375" height="225"/>
+        <image name="buyBg.png" width="268" height="47"/>
+        <image name="daoshaubaozhang-tubiao.png" width="112" height="113"/>
+    </resources>
+</document>

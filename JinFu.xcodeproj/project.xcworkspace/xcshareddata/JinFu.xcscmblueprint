@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d6625f66-0344-11e5-afe7-1bfa06b6f11c++4995",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d6625f66-0344-11e5-afe7-1bfa06b6f11c++4995" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "d6625f66-0344-11e5-afe7-1bfa06b6f11c++4995" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A0DD4712-93F1-4690-A71D-E0A54224BCD4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "d6625f66-0344-11e5-afe7-1bfa06b6f11c++4995" : "%E9%9B%AA%E7%90%83%E9%87%91%E7%A6%8F\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JinFu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JinFu\/JinFu.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/192.168.1.201\/project",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d6625f66-0344-11e5-afe7-1bfa06b6f11c++4995"
+    }
+  ]
+}
