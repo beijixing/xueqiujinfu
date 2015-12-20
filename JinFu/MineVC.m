@@ -76,7 +76,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"indexpath section = %d", indexPath.section);
+    NSLog(@"indexpath section = %ld", indexPath.section);
     
     if (indexPath.section == 2)
     {

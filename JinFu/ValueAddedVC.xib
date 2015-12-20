@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValueAddedVC">
+            <connections>
+                <outlet property="valueAddedServiceTable" destination="IdJ-eC-PCp" id="yyD-ww-rTc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zengzhifuwu--beijing-.png" translatesAutoresizingMaskIntoConstraints="NO" id="soi-af-S6T">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="soi-af-S6T" secondAttribute="height" multiplier="2:1" id="oEp-cU-n2M"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IdJ-eC-PCp">
+                    <rect key="frame" x="0.0" y="160" width="320" height="408"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mUa-I4-cAc"/>
+                        <outlet property="delegate" destination="-1" id="4NK-8i-aZN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="IdJ-eC-PCp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Js-N1-46J"/>
+                <constraint firstItem="soi-af-S6T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="41C-2B-t0l"/>
+                <constraint firstAttribute="trailing" secondItem="IdJ-eC-PCp" secondAttribute="trailing" id="9AA-dy-Tcu"/>
+                <constraint firstAttribute="bottom" secondItem="IdJ-eC-PCp" secondAttribute="bottom" id="DSv-4k-fiH"/>
+                <constraint firstAttribute="trailing" secondItem="soi-af-S6T" secondAttribute="trailing" id="KFd-4q-0Jo"/>
+                <constraint firstItem="soi-af-S6T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hL4-ya-Q5c"/>
+                <constraint firstItem="IdJ-eC-PCp" firstAttribute="top" secondItem="soi-af-S6T" secondAttribute="bottom" id="nRo-8H-fac"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zengzhifuwu--beijing-.png" width="375" height="200"/>
+    </resources>
+</document>

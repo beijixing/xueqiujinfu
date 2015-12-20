@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AddProtectionInfoVC : UIViewController
+- (IBAction)agreeProtocol:(UIButton *)sender;
 
 @end

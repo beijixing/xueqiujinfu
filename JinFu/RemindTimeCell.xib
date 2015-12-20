@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RemindTimeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提醒时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3Y-M6-BMB">
+                        <rect key="frame" x="20" y="4" width="63" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="V4r-wT-yjS"/>
+                            <constraint firstAttribute="width" constant="63" id="p3k-8x-a4x"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16:00 - 24:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8T-rM-l1y">
+                        <rect key="frame" x="203" y="4" width="97" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="ahQ-F7-WvU"/>
+                            <constraint firstAttribute="width" constant="97" id="ckV-h5-YbI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3IY-eG-0xF">
+                        <rect key="frame" x="0.0" y="28" width="320" height="1"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-L2-sIZ">
+                        <rect key="frame" x="152" y="4" width="36" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="AoD-H8-Dfa"/>
+                            <constraint firstAttribute="height" constant="21" id="CZj-Gh-BJE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="G8T-rM-l1y" firstAttribute="leading" secondItem="ng0-L2-sIZ" secondAttribute="trailing" constant="15" id="CMV-ii-gAL"/>
+                    <constraint firstAttribute="trailing" secondItem="G8T-rM-l1y" secondAttribute="trailing" constant="20" id="HYy-7h-XAB"/>
+                    <constraint firstItem="ng0-L2-sIZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Khh-MK-8W8"/>
+                    <constraint firstItem="C3Y-M6-BMB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="PQE-B1-3AP"/>
+                    <constraint firstItem="C3Y-M6-BMB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WE6-6V-Gaw"/>
+                    <constraint firstItem="G8T-rM-l1y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="XtT-x7-eYH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="preRemindDays" destination="ng0-L2-sIZ" id="D8d-68-S4f"/>
+                <outlet property="remindTime" destination="ng0-L2-sIZ" id="3aP-Qe-VYj"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

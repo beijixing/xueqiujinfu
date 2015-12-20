@@ -11,5 +11,5 @@
 @interface UIView (MyLayerView)
 
 - (void)setMyViewLayerBoardColor:(UIColor *)boardColor AndBoardWidth:(CGFloat)boardWidth AndCornerRadius:(CGFloat)radius;
-
+- (void)addDottedLineWithWidth:(CGFloat)lineWidth andColor:(UIColor*)lineColor;
 @end

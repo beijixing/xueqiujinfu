@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ProtectionTitleCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-f4-8pB">
+                        <rect key="frame" x="0.0" y="47" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LBX-xK-KUm"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoshuabaozhang.png" translatesAutoresizingMaskIntoConstraints="NO" id="L14-O9-5t1">
+                        <rect key="frame" x="18" y="4" width="35" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="av4-tT-Vcm"/>
+                            <constraint firstAttribute="width" constant="35" id="ezQ-to-wYh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盗刷保障" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-zl-Jvi">
+                        <rect key="frame" x="61" y="13" width="102" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="102" id="2Qc-B7-ppC"/>
+                            <constraint firstAttribute="height" constant="21" id="xlZ-WL-mVO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L14-O9-5t1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="0yC-3W-sgy"/>
+                    <constraint firstAttribute="trailing" secondItem="iwS-f4-8pB" secondAttribute="trailing" id="5Rz-Dz-UY3"/>
+                    <constraint firstItem="O5F-zl-Jvi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="OSx-b6-TXp"/>
+                    <constraint firstItem="iwS-f4-8pB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RSX-ze-icn"/>
+                    <constraint firstItem="O5F-zl-Jvi" firstAttribute="leading" secondItem="L14-O9-5t1" secondAttribute="trailing" constant="8" id="UcP-d8-J0C"/>
+                    <constraint firstItem="L14-O9-5t1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="g0K-jF-AhW"/>
+                    <constraint firstAttribute="bottom" secondItem="iwS-f4-8pB" secondAttribute="bottom" constant="1" id="wTy-fI-4h8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="image" destination="L14-O9-5t1" id="P75-cp-3B3"/>
+                <outlet property="title" destination="O5F-zl-Jvi" id="sVi-yg-8il"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="daoshuabaozhang.png" width="50" height="60"/>
+    </resources>
+</document>

@@ -77,6 +77,91 @@
 		F51D04131C22F8D500519911 /* diukabaozhang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F51D040E1C22F8D500519911 /* diukabaozhang@2x.png */; };
 		F51D04141C22F8D500519911 /* jinfu-tubiao-beijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F51D040F1C22F8D500519911 /* jinfu-tubiao-beijing@2x.png */; };
 		F51D04151C22F8D500519911 /* pos-ji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F51D04101C22F8D500519911 /* pos-ji@2x.png */; };
+		F5B588B51C259D1A004E5FA8 /* UnauthoProtectionInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588B31C259D1A004E5FA8 /* UnauthoProtectionInfoVC.m */; };
+		F5B588B61C259D1A004E5FA8 /* UnauthoProtectionInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588B41C259D1A004E5FA8 /* UnauthoProtectionInfoVC.xib */; };
+		F5B588BA1C259F4D004E5FA8 /* AddProtectionInfoVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588B81C259F4D004E5FA8 /* AddProtectionInfoVC2.m */; };
+		F5B588BB1C259F4D004E5FA8 /* AddProtectionInfoVC2.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588B91C259F4D004E5FA8 /* AddProtectionInfoVC2.xib */; };
+		F5B588BF1C25A03E004E5FA8 /* ProtectionTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588BD1C25A03E004E5FA8 /* ProtectionTitleCell.m */; };
+		F5B588C01C25A03E004E5FA8 /* ProtectionTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588BE1C25A03E004E5FA8 /* ProtectionTitleCell.xib */; };
+		F5B588C41C25A63B004E5FA8 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588C21C25A63B004E5FA8 /* UserInfoCell.m */; };
+		F5B588C51C25A63B004E5FA8 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588C31C25A63B004E5FA8 /* UserInfoCell.xib */; };
+		F5B588C91C25A77A004E5FA8 /* PaymentNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588C71C25A77A004E5FA8 /* PaymentNumberCell.m */; };
+		F5B588CA1C25A77A004E5FA8 /* PaymentNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588C81C25A77A004E5FA8 /* PaymentNumberCell.xib */; };
+		F5B588CE1C25A8D6004E5FA8 /* PayWayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5B588CC1C25A8D6004E5FA8 /* PayWayCell.m */; };
+		F5B588CF1C25A8D6004E5FA8 /* PayWayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B588CD1C25A8D6004E5FA8 /* PayWayCell.xib */; };
+		F5B588D41C25A996004E5FA8 /* iconfont-fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B588D01C25A996004E5FA8 /* iconfont-fanhui@2x.png */; };
+		F5B588D51C25A996004E5FA8 /* iconfont-qianjin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B588D11C25A996004E5FA8 /* iconfont-qianjin@2x.png */; };
+		F5B588D61C25A996004E5FA8 /* weChatIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B588D21C25A996004E5FA8 /* weChatIcon@2x.png */; };
+		F5B588D71C25A996004E5FA8 /* zhifu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B588D31C25A996004E5FA8 /* zhifu@2x.png */; };
+		F5ED57321C264902002C8509 /* UserInfoInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57301C264902002C8509 /* UserInfoInputCell.m */; };
+		F5ED57331C264902002C8509 /* UserInfoInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57311C264902002C8509 /* UserInfoInputCell.xib */; };
+		F5ED57371C264F98002C8509 /* TotalPaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57351C264F98002C8509 /* TotalPaymentCell.m */; };
+		F5ED57381C264F98002C8509 /* TotalPaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57361C264F98002C8509 /* TotalPaymentCell.xib */; };
+		F5ED573C1C265155002C8509 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED573A1C265155002C8509 /* CommitCell.m */; };
+		F5ED573D1C265155002C8509 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED573B1C265155002C8509 /* CommitCell.xib */; };
+		F5ED57411C26A35F002C8509 /* UploadImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED573F1C26A35F002C8509 /* UploadImageCell.m */; };
+		F5ED57421C26A35F002C8509 /* UploadImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57401C26A35F002C8509 /* UploadImageCell.xib */; };
+		F5ED57461C26C019002C8509 /* AddCardNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57441C26C019002C8509 /* AddCardNumberCell.m */; };
+		F5ED57471C26C019002C8509 /* AddCardNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57451C26C019002C8509 /* AddCardNumberCell.xib */; };
+		F5ED574B1C26C8A7002C8509 /* ServicePeriodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57491C26C8A7002C8509 /* ServicePeriodCell.m */; };
+		F5ED574C1C26C8A7002C8509 /* ServicePeriodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED574A1C26C8A7002C8509 /* ServicePeriodCell.xib */; };
+		F5ED57501C26CCFB002C8509 /* CardNumberAndDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED574E1C26CCFB002C8509 /* CardNumberAndDateCell.m */; };
+		F5ED57511C26CCFB002C8509 /* CardNumberAndDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED574F1C26CCFB002C8509 /* CardNumberAndDateCell.xib */; };
+		F5ED57541C26D7F1002C8509 /* arrow-hui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57521C26D7F1002C8509 /* arrow-hui@2x.png */; };
+		F5ED57551C26D7F1002C8509 /* arrow-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57531C26D7F1002C8509 /* arrow-left@2x.png */; };
+		F5ED57591C26D85F002C8509 /* EditRemindDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57571C26D85F002C8509 /* EditRemindDateCell.m */; };
+		F5ED575A1C26D85F002C8509 /* EditRemindDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57581C26D85F002C8509 /* EditRemindDateCell.xib */; };
+		F5ED575E1C26DE98002C8509 /* RemindTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED575C1C26DE98002C8509 /* RemindTimeCell.m */; };
+		F5ED575F1C26DE98002C8509 /* RemindTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED575D1C26DE98002C8509 /* RemindTimeCell.xib */; };
+		F5ED57631C26E19A002C8509 /* MySettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57611C26E19A002C8509 /* MySettingsVC.m */; };
+		F5ED57641C26E19A002C8509 /* MySettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57621C26E19A002C8509 /* MySettingsVC.xib */; };
+		F5ED57681C26E2CE002C8509 /* SettingsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57661C26E2CE002C8509 /* SettingsTableCell.m */; };
+		F5ED57691C26E2CE002C8509 /* SettingsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57671C26E2CE002C8509 /* SettingsTableCell.xib */; };
+		F5ED57731C26E3A8002C8509 /* cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576A1C26E3A8002C8509 /* cancel@2x.png */; };
+		F5ED57741C26E3A8002C8509 /* confirm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576B1C26E3A8002C8509 /* confirm@2x.png */; };
+		F5ED57751C26E3A8002C8509 /* guanbi-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576C1C26E3A8002C8509 /* guanbi-icon@2x.png */; };
+		F5ED57761C26E3A8002C8509 /* guanyuwomen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576D1C26E3A8002C8509 /* guanyuwomen@2x.png */; };
+		F5ED57771C26E3A8002C8509 /* icon-kaiqi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576E1C26E3A8002C8509 /* icon-kaiqi@2x.png */; };
+		F5ED57781C26E3A8002C8509 /* qinchuhuancun-tanch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED576F1C26E3A8002C8509 /* qinchuhuancun-tanch@2x.png */; };
+		F5ED57791C26E3A8002C8509 /* qingchuhuancun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57701C26E3A8002C8509 /* qingchuhuancun@2x.png */; };
+		F5ED577A1C26E3A8002C8509 /* tuichudneglu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57711C26E3A8002C8509 /* tuichudneglu@2x.png */; };
+		F5ED577B1C26E3A8002C8509 /* xinxiaoxitongzhi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57721C26E3A8002C8509 /* xinxiaoxitongzhi@2x.png */; };
+		F5ED577F1C26EA12002C8509 /* PayOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED577D1C26EA12002C8509 /* PayOutCell.m */; };
+		F5ED57801C26EA12002C8509 /* PayOutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED577E1C26EA12002C8509 /* PayOutCell.xib */; };
+		F5ED57881C26EC77002C8509 /* ValueAddedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57861C26EC77002C8509 /* ValueAddedVC.m */; };
+		F5ED57891C26EC77002C8509 /* ValueAddedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57871C26EC77002C8509 /* ValueAddedVC.xib */; };
+		F5ED578E1C26ECE9002C8509 /* dianhuafuwu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED578A1C26ECE9002C8509 /* dianhuafuwu-icon@2x.png */; };
+		F5ED578F1C26ECE9002C8509 /* icon-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED578B1C26ECE9002C8509 /* icon-left@2x.png */; };
+		F5ED57901C26ECE9002C8509 /* note@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED578C1C26ECE9002C8509 /* note@2x.png */; };
+		F5ED57911C26ECE9002C8509 /* zengzhifuwu--beijing-@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED578D1C26ECE9002C8509 /* zengzhifuwu--beijing-@2x.png */; };
+		F5ED57951C26EEA1002C8509 /* ProtectionCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED57931C26EEA1002C8509 /* ProtectionCardCell.m */; };
+		F5ED57961C26EEA1002C8509 /* ProtectionCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57941C26EEA1002C8509 /* ProtectionCardCell.xib */; };
+		F5ED579B1C26EF35002C8509 /* bankCardBg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57971C26EF35002C8509 /* bankCardBg1@2x.png */; };
+		F5ED579C1C26EF35002C8509 /* bankCardBg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57981C26EF35002C8509 /* bankCardBg2@2x.png */; };
+		F5ED579D1C26EF35002C8509 /* bankCardBg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57991C26EF35002C8509 /* bankCardBg3@2x.png */; };
+		F5ED579E1C26EF35002C8509 /* bankCardBg4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED579A1C26EF35002C8509 /* bankCardBg4@2x.png */; };
+		F5ED57B51C26F143002C8509 /* ￥@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED579F1C26F143002C8509 /* ￥@2x.png */; };
+		F5ED57B61C26F143002C8509 /* arrow-hong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A01C26F143002C8509 /* arrow-hong@2x.png */; };
+		F5ED57B71C26F143002C8509 /* arrow-huang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A11C26F143002C8509 /* arrow-huang@2x.png */; };
+		F5ED57B81C26F143002C8509 /* arrow-lv-@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A21C26F143002C8509 /* arrow-lv-@2x.png */; };
+		F5ED57B91C26F143002C8509 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A31C26F143002C8509 /* arrow@2x.png */; };
+		F5ED57BA1C26F143002C8509 /* arrowWithCircle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A41C26F143002C8509 /* arrowWithCircle@2x.png */; };
+		F5ED57BB1C26F143002C8509 /* bank1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A51C26F143002C8509 /* bank1@2x.png */; };
+		F5ED57BC1C26F143002C8509 /* bank2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A61C26F143002C8509 /* bank2@2x.png */; };
+		F5ED57BD1C26F143002C8509 /* bank3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A71C26F143002C8509 /* bank3@2x.png */; };
+		F5ED57BE1C26F143002C8509 /* beijingtu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A81C26F143002C8509 /* beijingtu@2x.png */; };
+		F5ED57BF1C26F143002C8509 /* bu fen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57A91C26F143002C8509 /* bu fen@2x.png */; };
+		F5ED57C01C26F143002C8509 /* CNY@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AA1C26F143002C8509 /* CNY@2x.png */; };
+		F5ED57C11C26F143002C8509 /* dao-shua-bao-zhang-@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AB1C26F143002C8509 /* dao-shua-bao-zhang-@2x.png */; };
+		F5ED57C21C26F143002C8509 /* diu-ka-bao-zhang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AC1C26F143002C8509 /* diu-ka-bao-zhang@2x.png */; };
+		F5ED57C31C26F143002C8509 /* jifen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AD1C26F143002C8509 /* jifen@2x.png */; };
+		F5ED57C41C26F143002C8509 /* payed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AE1C26F143002C8509 /* payed@2x.png */; };
+		F5ED57C51C26F143002C8509 /* payPart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57AF1C26F143002C8509 /* payPart@2x.png */; };
+		F5ED57C61C26F143002C8509 /* wei-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57B01C26F143002C8509 /* wei-6@2x.png */; };
+		F5ED57C71C26F143002C8509 /* weihuan @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57B11C26F143002C8509 /* weihuan @2x.png */; };
+		F5ED57C81C26F143002C8509 /* yi-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57B21C26F143002C8509 /* yi-5@2x.png */; };
+		F5ED57C91C26F143002C8509 /* zhangdanjin-e@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57B31C26F143002C8509 /* zhangdanjin-e@2x.png */; };
+		F5ED57CA1C26F143002C8509 /* zhongguoyinhang--beibeijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5ED57B41C26F143002C8509 /* zhongguoyinhang--beibeijing@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +258,111 @@
 		F51D040E1C22F8D500519911 /* diukabaozhang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diukabaozhang@2x.png"; sourceTree = "<group>"; };
 		F51D040F1C22F8D500519911 /* jinfu-tubiao-beijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jinfu-tubiao-beijing@2x.png"; sourceTree = "<group>"; };
 		F51D04101C22F8D500519911 /* pos-ji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pos-ji@2x.png"; sourceTree = "<group>"; };
+		F5B588B21C259D1A004E5FA8 /* UnauthoProtectionInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthoProtectionInfoVC.h; sourceTree = "<group>"; };
+		F5B588B31C259D1A004E5FA8 /* UnauthoProtectionInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthoProtectionInfoVC.m; sourceTree = "<group>"; };
+		F5B588B41C259D1A004E5FA8 /* UnauthoProtectionInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnauthoProtectionInfoVC.xib; sourceTree = "<group>"; };
+		F5B588B71C259F4D004E5FA8 /* AddProtectionInfoVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProtectionInfoVC2.h; sourceTree = "<group>"; };
+		F5B588B81C259F4D004E5FA8 /* AddProtectionInfoVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProtectionInfoVC2.m; sourceTree = "<group>"; };
+		F5B588B91C259F4D004E5FA8 /* AddProtectionInfoVC2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddProtectionInfoVC2.xib; sourceTree = "<group>"; };
+		F5B588BC1C25A03E004E5FA8 /* ProtectionTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtectionTitleCell.h; sourceTree = "<group>"; };
+		F5B588BD1C25A03E004E5FA8 /* ProtectionTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtectionTitleCell.m; sourceTree = "<group>"; };
+		F5B588BE1C25A03E004E5FA8 /* ProtectionTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProtectionTitleCell.xib; sourceTree = "<group>"; };
+		F5B588C11C25A63B004E5FA8 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
+		F5B588C21C25A63B004E5FA8 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
+		F5B588C31C25A63B004E5FA8 /* UserInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
+		F5B588C61C25A77A004E5FA8 /* PaymentNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentNumberCell.h; sourceTree = "<group>"; };
+		F5B588C71C25A77A004E5FA8 /* PaymentNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentNumberCell.m; sourceTree = "<group>"; };
+		F5B588C81C25A77A004E5FA8 /* PaymentNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentNumberCell.xib; sourceTree = "<group>"; };
+		F5B588CB1C25A8D6004E5FA8 /* PayWayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayWayCell.h; sourceTree = "<group>"; };
+		F5B588CC1C25A8D6004E5FA8 /* PayWayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayWayCell.m; sourceTree = "<group>"; };
+		F5B588CD1C25A8D6004E5FA8 /* PayWayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayWayCell.xib; sourceTree = "<group>"; };
+		F5B588D01C25A996004E5FA8 /* iconfont-fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-fanhui@2x.png"; sourceTree = "<group>"; };
+		F5B588D11C25A996004E5FA8 /* iconfont-qianjin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconfont-qianjin@2x.png"; sourceTree = "<group>"; };
+		F5B588D21C25A996004E5FA8 /* weChatIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatIcon@2x.png"; sourceTree = "<group>"; };
+		F5B588D31C25A996004E5FA8 /* zhifu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhifu@2x.png"; sourceTree = "<group>"; };
+		F5ED572F1C264902002C8509 /* UserInfoInputCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoInputCell.h; sourceTree = "<group>"; };
+		F5ED57301C264902002C8509 /* UserInfoInputCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoInputCell.m; sourceTree = "<group>"; };
+		F5ED57311C264902002C8509 /* UserInfoInputCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoInputCell.xib; sourceTree = "<group>"; };
+		F5ED57341C264F98002C8509 /* TotalPaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPaymentCell.h; sourceTree = "<group>"; };
+		F5ED57351C264F98002C8509 /* TotalPaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalPaymentCell.m; sourceTree = "<group>"; };
+		F5ED57361C264F98002C8509 /* TotalPaymentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalPaymentCell.xib; sourceTree = "<group>"; };
+		F5ED57391C265155002C8509 /* CommitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitCell.h; sourceTree = "<group>"; };
+		F5ED573A1C265155002C8509 /* CommitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitCell.m; sourceTree = "<group>"; };
+		F5ED573B1C265155002C8509 /* CommitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitCell.xib; sourceTree = "<group>"; };
+		F5ED573E1C26A35F002C8509 /* UploadImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageCell.h; sourceTree = "<group>"; };
+		F5ED573F1C26A35F002C8509 /* UploadImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageCell.m; sourceTree = "<group>"; };
+		F5ED57401C26A35F002C8509 /* UploadImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadImageCell.xib; sourceTree = "<group>"; };
+		F5ED57431C26C019002C8509 /* AddCardNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardNumberCell.h; sourceTree = "<group>"; };
+		F5ED57441C26C019002C8509 /* AddCardNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardNumberCell.m; sourceTree = "<group>"; };
+		F5ED57451C26C019002C8509 /* AddCardNumberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCardNumberCell.xib; sourceTree = "<group>"; };
+		F5ED57481C26C8A7002C8509 /* ServicePeriodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicePeriodCell.h; sourceTree = "<group>"; };
+		F5ED57491C26C8A7002C8509 /* ServicePeriodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicePeriodCell.m; sourceTree = "<group>"; };
+		F5ED574A1C26C8A7002C8509 /* ServicePeriodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicePeriodCell.xib; sourceTree = "<group>"; };
+		F5ED574D1C26CCFB002C8509 /* CardNumberAndDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardNumberAndDateCell.h; sourceTree = "<group>"; };
+		F5ED574E1C26CCFB002C8509 /* CardNumberAndDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardNumberAndDateCell.m; sourceTree = "<group>"; };
+		F5ED574F1C26CCFB002C8509 /* CardNumberAndDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardNumberAndDateCell.xib; sourceTree = "<group>"; };
+		F5ED57521C26D7F1002C8509 /* arrow-hui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-hui@2x.png"; sourceTree = "<group>"; };
+		F5ED57531C26D7F1002C8509 /* arrow-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-left@2x.png"; sourceTree = "<group>"; };
+		F5ED57561C26D85F002C8509 /* EditRemindDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRemindDateCell.h; sourceTree = "<group>"; };
+		F5ED57571C26D85F002C8509 /* EditRemindDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRemindDateCell.m; sourceTree = "<group>"; };
+		F5ED57581C26D85F002C8509 /* EditRemindDateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditRemindDateCell.xib; sourceTree = "<group>"; };
+		F5ED575B1C26DE98002C8509 /* RemindTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindTimeCell.h; sourceTree = "<group>"; };
+		F5ED575C1C26DE98002C8509 /* RemindTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindTimeCell.m; sourceTree = "<group>"; };
+		F5ED575D1C26DE98002C8509 /* RemindTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindTimeCell.xib; sourceTree = "<group>"; };
+		F5ED57601C26E19A002C8509 /* MySettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingsVC.h; sourceTree = "<group>"; };
+		F5ED57611C26E19A002C8509 /* MySettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySettingsVC.m; sourceTree = "<group>"; };
+		F5ED57621C26E19A002C8509 /* MySettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySettingsVC.xib; sourceTree = "<group>"; };
+		F5ED57651C26E2CE002C8509 /* SettingsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableCell.h; sourceTree = "<group>"; };
+		F5ED57661C26E2CE002C8509 /* SettingsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableCell.m; sourceTree = "<group>"; };
+		F5ED57671C26E2CE002C8509 /* SettingsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableCell.xib; sourceTree = "<group>"; };
+		F5ED576A1C26E3A8002C8509 /* cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel@2x.png"; sourceTree = "<group>"; };
+		F5ED576B1C26E3A8002C8509 /* confirm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "confirm@2x.png"; sourceTree = "<group>"; };
+		F5ED576C1C26E3A8002C8509 /* guanbi-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanbi-icon@2x.png"; sourceTree = "<group>"; };
+		F5ED576D1C26E3A8002C8509 /* guanyuwomen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guanyuwomen@2x.png"; sourceTree = "<group>"; };
+		F5ED576E1C26E3A8002C8509 /* icon-kaiqi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-kaiqi@2x.png"; sourceTree = "<group>"; };
+		F5ED576F1C26E3A8002C8509 /* qinchuhuancun-tanch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qinchuhuancun-tanch@2x.png"; sourceTree = "<group>"; };
+		F5ED57701C26E3A8002C8509 /* qingchuhuancun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qingchuhuancun@2x.png"; sourceTree = "<group>"; };
+		F5ED57711C26E3A8002C8509 /* tuichudneglu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tuichudneglu@2x.png"; sourceTree = "<group>"; };
+		F5ED57721C26E3A8002C8509 /* xinxiaoxitongzhi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xinxiaoxitongzhi@2x.png"; sourceTree = "<group>"; };
+		F5ED577C1C26EA12002C8509 /* PayOutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOutCell.h; sourceTree = "<group>"; };
+		F5ED577D1C26EA12002C8509 /* PayOutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOutCell.m; sourceTree = "<group>"; };
+		F5ED577E1C26EA12002C8509 /* PayOutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayOutCell.xib; sourceTree = "<group>"; };
+		F5ED57851C26EC77002C8509 /* ValueAddedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueAddedVC.h; sourceTree = "<group>"; };
+		F5ED57861C26EC77002C8509 /* ValueAddedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueAddedVC.m; sourceTree = "<group>"; };
+		F5ED57871C26EC77002C8509 /* ValueAddedVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValueAddedVC.xib; sourceTree = "<group>"; };
+		F5ED578A1C26ECE9002C8509 /* dianhuafuwu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dianhuafuwu-icon@2x.png"; sourceTree = "<group>"; };
+		F5ED578B1C26ECE9002C8509 /* icon-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-left@2x.png"; sourceTree = "<group>"; };
+		F5ED578C1C26ECE9002C8509 /* note@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "note@2x.png"; sourceTree = "<group>"; };
+		F5ED578D1C26ECE9002C8509 /* zengzhifuwu--beijing-@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zengzhifuwu--beijing-@2x.png"; sourceTree = "<group>"; };
+		F5ED57921C26EEA1002C8509 /* ProtectionCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtectionCardCell.h; sourceTree = "<group>"; };
+		F5ED57931C26EEA1002C8509 /* ProtectionCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtectionCardCell.m; sourceTree = "<group>"; };
+		F5ED57941C26EEA1002C8509 /* ProtectionCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProtectionCardCell.xib; sourceTree = "<group>"; };
+		F5ED57971C26EF35002C8509 /* bankCardBg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bankCardBg1@2x.png"; sourceTree = "<group>"; };
+		F5ED57981C26EF35002C8509 /* bankCardBg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bankCardBg2@2x.png"; sourceTree = "<group>"; };
+		F5ED57991C26EF35002C8509 /* bankCardBg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bankCardBg3@2x.png"; sourceTree = "<group>"; };
+		F5ED579A1C26EF35002C8509 /* bankCardBg4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bankCardBg4@2x.png"; sourceTree = "<group>"; };
+		F5ED579F1C26F143002C8509 /* ￥@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "￥@2x.png"; sourceTree = "<group>"; };
+		F5ED57A01C26F143002C8509 /* arrow-hong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-hong@2x.png"; sourceTree = "<group>"; };
+		F5ED57A11C26F143002C8509 /* arrow-huang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-huang@2x.png"; sourceTree = "<group>"; };
+		F5ED57A21C26F143002C8509 /* arrow-lv-@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-lv-@2x.png"; sourceTree = "<group>"; };
+		F5ED57A31C26F143002C8509 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		F5ED57A41C26F143002C8509 /* arrowWithCircle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowWithCircle@2x.png"; sourceTree = "<group>"; };
+		F5ED57A51C26F143002C8509 /* bank1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank1@2x.png"; sourceTree = "<group>"; };
+		F5ED57A61C26F143002C8509 /* bank2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank2@2x.png"; sourceTree = "<group>"; };
+		F5ED57A71C26F143002C8509 /* bank3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank3@2x.png"; sourceTree = "<group>"; };
+		F5ED57A81C26F143002C8509 /* beijingtu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beijingtu@2x.png"; sourceTree = "<group>"; };
+		F5ED57A91C26F143002C8509 /* bu fen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bu fen@2x.png"; sourceTree = "<group>"; };
+		F5ED57AA1C26F143002C8509 /* CNY@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY@2x.png"; sourceTree = "<group>"; };
+		F5ED57AB1C26F143002C8509 /* dao-shua-bao-zhang-@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dao-shua-bao-zhang-@2x.png"; sourceTree = "<group>"; };
+		F5ED57AC1C26F143002C8509 /* diu-ka-bao-zhang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "diu-ka-bao-zhang@2x.png"; sourceTree = "<group>"; };
+		F5ED57AD1C26F143002C8509 /* jifen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jifen@2x.png"; sourceTree = "<group>"; };
+		F5ED57AE1C26F143002C8509 /* payed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payed@2x.png"; sourceTree = "<group>"; };
+		F5ED57AF1C26F143002C8509 /* payPart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "payPart@2x.png"; sourceTree = "<group>"; };
+		F5ED57B01C26F143002C8509 /* wei-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wei-6@2x.png"; sourceTree = "<group>"; };
+		F5ED57B11C26F143002C8509 /* weihuan @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weihuan @2x.png"; sourceTree = "<group>"; };
+		F5ED57B21C26F143002C8509 /* yi-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yi-5@2x.png"; sourceTree = "<group>"; };
+		F5ED57B31C26F143002C8509 /* zhangdanjin-e@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhangdanjin-e@2x.png"; sourceTree = "<group>"; };
+		F5ED57B41C26F143002C8509 /* zhongguoyinhang--beibeijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhongguoyinhang--beibeijing@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,9 +456,10 @@
 				86D233991C22B36700344620 /* MineTableCell.h */,
 				86D2339A1C22B36700344620 /* MineTableCell.m */,
 				86D2339B1C22B36700344620 /* MineTableCell.xib */,
-				865A9A9F1C23B3760070BACF /* FeedBackVC.h */,
-				865A9AA01C23B3760070BACF /* FeedBackVC.m */,
-				865A9AA11C23B3760070BACF /* FeedBackVC.xib */,
+				F5ED57841C26EBEB002C8509 /* Tuiguang */,
+				F5ED57811C26EB77002C8509 /* FeedBack */,
+				F5ED57821C26EB9C002C8509 /* Settings */,
+				F5ED57831C26EBB1002C8509 /* Zengzhi */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
@@ -304,6 +495,51 @@
 				865A9A9A1C23A7AB0070BACF /* AddProtectionInfoVC.h */,
 				865A9A9B1C23A7AB0070BACF /* AddProtectionInfoVC.m */,
 				865A9A9C1C23A7AB0070BACF /* AddProtectionInfoVC.xib */,
+				F5B588B71C259F4D004E5FA8 /* AddProtectionInfoVC2.h */,
+				F5B588B81C259F4D004E5FA8 /* AddProtectionInfoVC2.m */,
+				F5B588B91C259F4D004E5FA8 /* AddProtectionInfoVC2.xib */,
+				F5B588B21C259D1A004E5FA8 /* UnauthoProtectionInfoVC.h */,
+				F5B588B31C259D1A004E5FA8 /* UnauthoProtectionInfoVC.m */,
+				F5B588B41C259D1A004E5FA8 /* UnauthoProtectionInfoVC.xib */,
+				F5B588BC1C25A03E004E5FA8 /* ProtectionTitleCell.h */,
+				F5B588BD1C25A03E004E5FA8 /* ProtectionTitleCell.m */,
+				F5B588BE1C25A03E004E5FA8 /* ProtectionTitleCell.xib */,
+				F5B588C11C25A63B004E5FA8 /* UserInfoCell.h */,
+				F5B588C21C25A63B004E5FA8 /* UserInfoCell.m */,
+				F5B588C31C25A63B004E5FA8 /* UserInfoCell.xib */,
+				F5B588C61C25A77A004E5FA8 /* PaymentNumberCell.h */,
+				F5B588C71C25A77A004E5FA8 /* PaymentNumberCell.m */,
+				F5B588C81C25A77A004E5FA8 /* PaymentNumberCell.xib */,
+				F5B588CB1C25A8D6004E5FA8 /* PayWayCell.h */,
+				F5B588CC1C25A8D6004E5FA8 /* PayWayCell.m */,
+				F5B588CD1C25A8D6004E5FA8 /* PayWayCell.xib */,
+				F5ED572F1C264902002C8509 /* UserInfoInputCell.h */,
+				F5ED57301C264902002C8509 /* UserInfoInputCell.m */,
+				F5ED57311C264902002C8509 /* UserInfoInputCell.xib */,
+				F5ED57341C264F98002C8509 /* TotalPaymentCell.h */,
+				F5ED57351C264F98002C8509 /* TotalPaymentCell.m */,
+				F5ED57361C264F98002C8509 /* TotalPaymentCell.xib */,
+				F5ED57391C265155002C8509 /* CommitCell.h */,
+				F5ED573A1C265155002C8509 /* CommitCell.m */,
+				F5ED573B1C265155002C8509 /* CommitCell.xib */,
+				F5ED573E1C26A35F002C8509 /* UploadImageCell.h */,
+				F5ED573F1C26A35F002C8509 /* UploadImageCell.m */,
+				F5ED57401C26A35F002C8509 /* UploadImageCell.xib */,
+				F5ED57431C26C019002C8509 /* AddCardNumberCell.h */,
+				F5ED57441C26C019002C8509 /* AddCardNumberCell.m */,
+				F5ED57451C26C019002C8509 /* AddCardNumberCell.xib */,
+				F5ED57481C26C8A7002C8509 /* ServicePeriodCell.h */,
+				F5ED57491C26C8A7002C8509 /* ServicePeriodCell.m */,
+				F5ED574A1C26C8A7002C8509 /* ServicePeriodCell.xib */,
+				F5ED574D1C26CCFB002C8509 /* CardNumberAndDateCell.h */,
+				F5ED574E1C26CCFB002C8509 /* CardNumberAndDateCell.m */,
+				F5ED574F1C26CCFB002C8509 /* CardNumberAndDateCell.xib */,
+				F5ED57561C26D85F002C8509 /* EditRemindDateCell.h */,
+				F5ED57571C26D85F002C8509 /* EditRemindDateCell.m */,
+				F5ED57581C26D85F002C8509 /* EditRemindDateCell.xib */,
+				F5ED575B1C26DE98002C8509 /* RemindTimeCell.h */,
+				F5ED575C1C26DE98002C8509 /* RemindTimeCell.m */,
+				F5ED575D1C26DE98002C8509 /* RemindTimeCell.xib */,
 			);
 			name = Financial;
 			sourceTree = "<group>";
@@ -311,6 +547,51 @@
 		865809F61C214E9D00629D61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F5ED57971C26EF35002C8509 /* bankCardBg1@2x.png */,
+				F5ED57981C26EF35002C8509 /* bankCardBg2@2x.png */,
+				F5ED57991C26EF35002C8509 /* bankCardBg3@2x.png */,
+				F5ED579A1C26EF35002C8509 /* bankCardBg4@2x.png */,
+				F5ED576A1C26E3A8002C8509 /* cancel@2x.png */,
+				F5ED578A1C26ECE9002C8509 /* dianhuafuwu-icon@2x.png */,
+				F5ED578B1C26ECE9002C8509 /* icon-left@2x.png */,
+				F5ED578C1C26ECE9002C8509 /* note@2x.png */,
+				F5ED579F1C26F143002C8509 /* ￥@2x.png */,
+				F5ED57A01C26F143002C8509 /* arrow-hong@2x.png */,
+				F5ED57A11C26F143002C8509 /* arrow-huang@2x.png */,
+				F5ED57A21C26F143002C8509 /* arrow-lv-@2x.png */,
+				F5ED57A31C26F143002C8509 /* arrow@2x.png */,
+				F5ED57A41C26F143002C8509 /* arrowWithCircle@2x.png */,
+				F5ED57A51C26F143002C8509 /* bank1@2x.png */,
+				F5ED57A61C26F143002C8509 /* bank2@2x.png */,
+				F5ED57A71C26F143002C8509 /* bank3@2x.png */,
+				F5ED57A81C26F143002C8509 /* beijingtu@2x.png */,
+				F5ED57A91C26F143002C8509 /* bu fen@2x.png */,
+				F5ED57AA1C26F143002C8509 /* CNY@2x.png */,
+				F5ED57AB1C26F143002C8509 /* dao-shua-bao-zhang-@2x.png */,
+				F5ED57AC1C26F143002C8509 /* diu-ka-bao-zhang@2x.png */,
+				F5ED57AD1C26F143002C8509 /* jifen@2x.png */,
+				F5ED57AE1C26F143002C8509 /* payed@2x.png */,
+				F5ED57AF1C26F143002C8509 /* payPart@2x.png */,
+				F5ED57B01C26F143002C8509 /* wei-6@2x.png */,
+				F5ED57B11C26F143002C8509 /* weihuan @2x.png */,
+				F5ED57B21C26F143002C8509 /* yi-5@2x.png */,
+				F5ED57B31C26F143002C8509 /* zhangdanjin-e@2x.png */,
+				F5ED57B41C26F143002C8509 /* zhongguoyinhang--beibeijing@2x.png */,
+				F5ED578D1C26ECE9002C8509 /* zengzhifuwu--beijing-@2x.png */,
+				F5ED576B1C26E3A8002C8509 /* confirm@2x.png */,
+				F5ED576C1C26E3A8002C8509 /* guanbi-icon@2x.png */,
+				F5ED576D1C26E3A8002C8509 /* guanyuwomen@2x.png */,
+				F5ED576E1C26E3A8002C8509 /* icon-kaiqi@2x.png */,
+				F5ED576F1C26E3A8002C8509 /* qinchuhuancun-tanch@2x.png */,
+				F5ED57701C26E3A8002C8509 /* qingchuhuancun@2x.png */,
+				F5ED57711C26E3A8002C8509 /* tuichudneglu@2x.png */,
+				F5ED57721C26E3A8002C8509 /* xinxiaoxitongzhi@2x.png */,
+				F5ED57521C26D7F1002C8509 /* arrow-hui@2x.png */,
+				F5ED57531C26D7F1002C8509 /* arrow-left@2x.png */,
+				F5B588D01C25A996004E5FA8 /* iconfont-fanhui@2x.png */,
+				F5B588D11C25A996004E5FA8 /* iconfont-qianjin@2x.png */,
+				F5B588D21C25A996004E5FA8 /* weChatIcon@2x.png */,
+				F5B588D31C25A996004E5FA8 /* zhifu@2x.png */,
 				865A9A981C239B290070BACF /* buyBg@2x.png */,
 				865A9A8A1C23990A0070BACF /* beijing-daoshuaaozhang@2x.png */,
 				865A9A8B1C23990A0070BACF /* daoshaubaozhang-tubiao@2x.png */,
@@ -382,6 +663,52 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F5ED57811C26EB77002C8509 /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				865A9A9F1C23B3760070BACF /* FeedBackVC.h */,
+				865A9AA01C23B3760070BACF /* FeedBackVC.m */,
+				865A9AA11C23B3760070BACF /* FeedBackVC.xib */,
+			);
+			name = FeedBack;
+			sourceTree = "<group>";
+		};
+		F5ED57821C26EB9C002C8509 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F5ED57601C26E19A002C8509 /* MySettingsVC.h */,
+				F5ED57611C26E19A002C8509 /* MySettingsVC.m */,
+				F5ED57621C26E19A002C8509 /* MySettingsVC.xib */,
+				F5ED57651C26E2CE002C8509 /* SettingsTableCell.h */,
+				F5ED57661C26E2CE002C8509 /* SettingsTableCell.m */,
+				F5ED57671C26E2CE002C8509 /* SettingsTableCell.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		F5ED57831C26EBB1002C8509 /* Zengzhi */ = {
+			isa = PBXGroup;
+			children = (
+				F5ED577D1C26EA12002C8509 /* PayOutCell.m */,
+				F5ED577E1C26EA12002C8509 /* PayOutCell.xib */,
+				F5ED577C1C26EA12002C8509 /* PayOutCell.h */,
+				F5ED57851C26EC77002C8509 /* ValueAddedVC.h */,
+				F5ED57861C26EC77002C8509 /* ValueAddedVC.m */,
+				F5ED57871C26EC77002C8509 /* ValueAddedVC.xib */,
+				F5ED57921C26EEA1002C8509 /* ProtectionCardCell.h */,
+				F5ED57931C26EEA1002C8509 /* ProtectionCardCell.m */,
+				F5ED57941C26EEA1002C8509 /* ProtectionCardCell.xib */,
+			);
+			name = Zengzhi;
+			sourceTree = "<group>";
+		};
+		F5ED57841C26EBEB002C8509 /* Tuiguang */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tuiguang;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,54 +771,119 @@
 			files = (
 				865A9AA31C23B3760070BACF /* FeedBackVC.xib in Resources */,
 				86E0EBE01C22522200C50254 /* emailPswd@2x.png in Resources */,
+				F5ED57C31C26F143002C8509 /* jifen@2x.png in Resources */,
 				8613B92B1C21290E0069D79F /* LaunchScreen.storyboard in Resources */,
+				F5B588D61C25A996004E5FA8 /* weChatIcon@2x.png in Resources */,
+				F5ED578F1C26ECE9002C8509 /* icon-left@2x.png in Resources */,
+				F5ED57C41C26F143002C8509 /* payed@2x.png in Resources */,
 				866165BB1C2150AA00B89F8A /* tabBar2@2x.png in Resources */,
+				F5ED57B81C26F143002C8509 /* arrow-lv-@2x.png in Resources */,
 				8685A1611C2280740054D215 /* unselect@2x.png in Resources */,
 				865A9A951C23990A0070BACF /* iconfont-shangchuanzhegnjian-qian@2x.png in Resources */,
+				F5ED57961C26EEA1002C8509 /* ProtectionCardCell.xib in Resources */,
+				F5ED57891C26EC77002C8509 /* ValueAddedVC.xib in Resources */,
+				F5ED57BC1C26F143002C8509 /* bank2@2x.png in Resources */,
 				865809E01C21451D00629D61 /* BaseViewController.xib in Resources */,
 				866165B91C2150AA00B89F8A /* tabBar1@2x.png in Resources */,
+				F5B588C51C25A63B004E5FA8 /* UserInfoCell.xib in Resources */,
+				F5ED57C61C26F143002C8509 /* wei-6@2x.png in Resources */,
 				866165BA1C2150AA00B89F8A /* tabBar2_active@2x.png in Resources */,
 				86D233A21C22B4B400344620 /* icon-wodeshezhi@2x.png in Resources */,
 				86E0EBD51C22494200C50254 /* message2@2x.png in Resources */,
 				866165C51C215AC200B89F8A /* navbarBg@2x.png in Resources */,
 				866165B81C2150AA00B89F8A /* tabBar1_active@2x.png in Resources */,
+				F5ED57551C26D7F1002C8509 /* arrow-left@2x.png in Resources */,
+				F5ED579B1C26EF35002C8509 /* bankCardBg1@2x.png in Resources */,
 				86E0EBE41C2252F100C50254 /* loginBtn@2x.png in Resources */,
+				F5ED577A1C26E3A8002C8509 /* tuichudneglu@2x.png in Resources */,
+				F5ED574C1C26C8A7002C8509 /* ServicePeriodCell.xib in Resources */,
+				F5ED57751C26E3A8002C8509 /* guanbi-icon@2x.png in Resources */,
 				F51D04151C22F8D500519911 /* pos-ji@2x.png in Resources */,
 				865A9A931C23990A0070BACF /* fuwutiaokuan-tongyi@2x.png in Resources */,
 				86D233A71C22B5C400344620 /* icon-right@2x.png in Resources */,
 				F51D04141C22F8D500519911 /* jinfu-tubiao-beijing@2x.png in Resources */,
 				8613B9281C21290E0069D79F /* Assets.xcassets in Resources */,
 				865A9A911C23990A0070BACF /* beijing-daoshuaaozhang@2x.png in Resources */,
+				F5B588CA1C25A77A004E5FA8 /* PaymentNumberCell.xib in Resources */,
+				F5ED57791C26E3A8002C8509 /* qingchuhuancun@2x.png in Resources */,
 				86D233A41C22B4B400344620 /* icon-yijianfankui@2x.png in Resources */,
+				F5ED575A1C26D85F002C8509 /* EditRemindDateCell.xib in Resources */,
+				F5ED57781C26E3A8002C8509 /* qinchuhuancun-tanch@2x.png in Resources */,
+				F5ED57761C26E3A8002C8509 /* guanyuwomen@2x.png in Resources */,
+				F5ED579D1C26EF35002C8509 /* bankCardBg3@2x.png in Resources */,
+				F5ED57C21C26F143002C8509 /* diu-ka-bao-zhang@2x.png in Resources */,
 				86E0EBE21C22522200C50254 /* selected.png in Resources */,
 				8685A1681C228D930054D215 /* progressImage@2x.png in Resources */,
 				86D233A31C22B4B400344620 /* icon-yewutuiguang@2x.png in Resources */,
+				F5ED579E1C26EF35002C8509 /* bankCardBg4@2x.png in Resources */,
+				F5ED57C71C26F143002C8509 /* weihuan @2x.png in Resources */,
+				F5B588D51C25A996004E5FA8 /* iconfont-qianjin@2x.png in Resources */,
+				F5B588B61C259D1A004E5FA8 /* UnauthoProtectionInfoVC.xib in Resources */,
 				86E0EBDF1C22522200C50254 /* email@2x.png in Resources */,
+				F5ED57471C26C019002C8509 /* AddCardNumberCell.xib in Resources */,
 				866165C71C21651D00B89F8A /* partPayment@2x.png in Resources */,
+				F5ED57C51C26F143002C8509 /* payPart@2x.png in Resources */,
 				866165BD1C2150AA00B89F8A /* tabBar3@2x.png in Resources */,
+				F5B588BB1C259F4D004E5FA8 /* AddProtectionInfoVC2.xib in Resources */,
 				865A9A961C23990A0070BACF /* iconfont-shangchuanzhegnjian-zhong@2x.png in Resources */,
 				865A9A991C239B290070BACF /* buyBg@2x.png in Resources */,
+				F5ED57B61C26F143002C8509 /* arrow-hong@2x.png in Resources */,
 				86E0EBD41C22494200C50254 /* message1@2x.png in Resources */,
+				F5ED57381C264F98002C8509 /* TotalPaymentCell.xib in Resources */,
 				865A9A891C2398000070BACF /* UnauthoProtectionVC.xib in Resources */,
+				F5ED57331C264902002C8509 /* UserInfoInputCell.xib in Resources */,
+				F5ED57B51C26F143002C8509 /* ￥@2x.png in Resources */,
+				F5ED57BD1C26F143002C8509 /* bank3@2x.png in Resources */,
 				F51D04111C22F8D500519911 /* daoshuabaozhang@2x.png in Resources */,
+				F5ED573D1C265155002C8509 /* CommitCell.xib in Resources */,
 				865A9A941C23990A0070BACF /* icon-down@2x.png in Resources */,
 				865A9A971C23990A0070BACF /* zhengjianbeijing03@2x.png in Resources */,
+				F5ED57641C26E19A002C8509 /* MySettingsVC.xib in Resources */,
+				F5ED57C81C26F143002C8509 /* yi-5@2x.png in Resources */,
 				865809F51C2148D200629D61 /* MineVC.xib in Resources */,
+				F5ED57511C26CCFB002C8509 /* CardNumberAndDateCell.xib in Resources */,
+				F5ED57541C26D7F1002C8509 /* arrow-hui@2x.png in Resources */,
+				F5ED57C91C26F143002C8509 /* zhangdanjin-e@2x.png in Resources */,
+				F5B588D71C25A996004E5FA8 /* zhifu@2x.png in Resources */,
+				F5ED57421C26A35F002C8509 /* UploadImageCell.xib in Resources */,
 				866165CB1C21688900B89F8A /* 12345.png in Resources */,
 				F51D04121C22F8D500519911 /* dianhuafuwu@2x.png in Resources */,
 				865A9A921C23990A0070BACF /* daoshaubaozhang-tubiao@2x.png in Resources */,
 				866165BC1C2150AA00B89F8A /* tabBar3_active@2x.png in Resources */,
 				86D2339D1C22B36700344620 /* MineTableCell.xib in Resources */,
+				F5ED575F1C26DE98002C8509 /* RemindTimeCell.xib in Resources */,
+				F5ED578E1C26ECE9002C8509 /* dianhuafuwu-icon@2x.png in Resources */,
+				F5B588CF1C25A8D6004E5FA8 /* PayWayCell.xib in Resources */,
 				865809EB1C21484E00629D61 /* HomeVC.xib in Resources */,
+				F5ED57771C26E3A8002C8509 /* icon-kaiqi@2x.png in Resources */,
+				F5ED57901C26ECE9002C8509 /* note@2x.png in Resources */,
+				F5ED57BF1C26F143002C8509 /* bu fen@2x.png in Resources */,
 				86D233A91C22B6FE00344620 /* touxiangbeijng@2x.png in Resources */,
+				F5ED57911C26ECE9002C8509 /* zengzhifuwu--beijing-@2x.png in Resources */,
+				F5ED57B91C26F143002C8509 /* arrow@2x.png in Resources */,
 				8685A16D1C22901E0054D215 /* ImportBillTableCell.xib in Resources */,
+				F5ED579C1C26EF35002C8509 /* bankCardBg2@2x.png in Resources */,
 				86E0EBE11C22522200C50254 /* recoCode@2x.png in Resources */,
 				8685A1661C228C6B0054D215 /* ImportBillVC.xib in Resources */,
 				86D233A51C22B4B400344620 /* icon-zhengzhifuwu@2x.png in Resources */,
 				865A9A9E1C23A7AB0070BACF /* AddProtectionInfoVC.xib in Resources */,
+				F5ED57801C26EA12002C8509 /* PayOutCell.xib in Resources */,
 				865809F01C2148B200629D61 /* FinancialVC.xib in Resources */,
 				F51D04131C22F8D500519911 /* diukabaozhang@2x.png in Resources */,
+				F5B588C01C25A03E004E5FA8 /* ProtectionTitleCell.xib in Resources */,
+				F5ED57731C26E3A8002C8509 /* cancel@2x.png in Resources */,
+				F5B588D41C25A996004E5FA8 /* iconfont-fanhui@2x.png in Resources */,
+				F5ED57691C26E2CE002C8509 /* SettingsTableCell.xib in Resources */,
+				F5ED57BB1C26F143002C8509 /* bank1@2x.png in Resources */,
+				F5ED57B71C26F143002C8509 /* arrow-huang@2x.png in Resources */,
+				F5ED57741C26E3A8002C8509 /* confirm@2x.png in Resources */,
+				F5ED57CA1C26F143002C8509 /* zhongguoyinhang--beibeijing@2x.png in Resources */,
+				F5ED57BA1C26F143002C8509 /* arrowWithCircle@2x.png in Resources */,
+				F5ED57C11C26F143002C8509 /* dao-shua-bao-zhang-@2x.png in Resources */,
+				F5ED57C01C26F143002C8509 /* CNY@2x.png in Resources */,
 				86E0EBDA1C224A1A00C50254 /* LoginVC.xib in Resources */,
+				F5ED577B1C26E3A8002C8509 /* xinxiaoxitongzhi@2x.png in Resources */,
+				F5ED57BE1C26F143002C8509 /* beijingtu@2x.png in Resources */,
 				8613B9261C21290E0069D79F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,22 +945,42 @@
 			files = (
 				8613B9201C21290E0069D79F /* AppDelegate.m in Sources */,
 				865A9A9D1C23A7AB0070BACF /* AddProtectionInfoVC.m in Sources */,
+				F5B588CE1C25A8D6004E5FA8 /* PayWayCell.m in Sources */,
 				865809DF1C21451D00629D61 /* BaseViewController.m in Sources */,
 				865A9AA21C23B3760070BACF /* FeedBackVC.m in Sources */,
 				866165C31C21564B00B89F8A /* AFNetManager.m in Sources */,
+				F5B588B51C259D1A004E5FA8 /* UnauthoProtectionInfoVC.m in Sources */,
+				F5B588C41C25A63B004E5FA8 /* UserInfoCell.m in Sources */,
 				86E0EBD11C2244B100C50254 /* UIBlockButton.m in Sources */,
+				F5ED57631C26E19A002C8509 /* MySettingsVC.m in Sources */,
 				865A9A881C2398000070BACF /* UnauthoProtectionVC.m in Sources */,
+				F5B588BA1C259F4D004E5FA8 /* AddProtectionInfoVC2.m in Sources */,
+				F5ED57371C264F98002C8509 /* TotalPaymentCell.m in Sources */,
+				F5ED573C1C265155002C8509 /* CommitCell.m in Sources */,
 				865809EA1C21484E00629D61 /* HomeVC.m in Sources */,
+				F5ED57321C264902002C8509 /* UserInfoInputCell.m in Sources */,
 				8685A15F1C22698A0054D215 /* UIView+MyLayerView.m in Sources */,
 				8685A1651C228C6B0054D215 /* ImportBillVC.m in Sources */,
 				86E0EBD91C224A1A00C50254 /* LoginVC.m in Sources */,
+				F5ED57591C26D85F002C8509 /* EditRemindDateCell.m in Sources */,
 				86D2339C1C22B36700344620 /* MineTableCell.m in Sources */,
 				8613B91D1C21290E0069D79F /* main.m in Sources */,
+				F5ED574B1C26C8A7002C8509 /* ServicePeriodCell.m in Sources */,
+				F5ED575E1C26DE98002C8509 /* RemindTimeCell.m in Sources */,
+				F5B588BF1C25A03E004E5FA8 /* ProtectionTitleCell.m in Sources */,
+				F5B588C91C25A77A004E5FA8 /* PaymentNumberCell.m in Sources */,
+				F5ED57501C26CCFB002C8509 /* CardNumberAndDateCell.m in Sources */,
 				865809EF1C2148B200629D61 /* FinancialVC.m in Sources */,
 				8685A16C1C22901E0054D215 /* ImportBillTableCell.m in Sources */,
+				F5ED577F1C26EA12002C8509 /* PayOutCell.m in Sources */,
+				F5ED57951C26EEA1002C8509 /* ProtectionCardCell.m in Sources */,
+				F5ED57681C26E2CE002C8509 /* SettingsTableCell.m in Sources */,
+				F5ED57411C26A35F002C8509 /* UploadImageCell.m in Sources */,
 				86E0EBD01C2244B100C50254 /* ToolBox.m in Sources */,
 				865809F41C2148D200629D61 /* MineVC.m in Sources */,
 				865809E31C21458F00629D61 /* JFTabBarController.m in Sources */,
+				F5ED57881C26EC77002C8509 /* ValueAddedVC.m in Sources */,
+				F5ED57461C26C019002C8509 /* AddCardNumberCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

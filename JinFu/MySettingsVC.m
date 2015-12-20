@@ -1,18 +1,18 @@
 //
-//  AddProtectionInfoVC.m
+//  MySettingsVC.m
 //  JinFu
 //
-//  Created by ybon on 15/12/18.
+//  Created by 郑光龙 on 15/12/20.
 //  Copyright © 2015年 ybon. All rights reserved.
 //
 
-#import "AddProtectionInfoVC.h"
-#import "UnauthoProtectionInfoVC.h"
-@interface AddProtectionInfoVC ()
+#import "MySettingsVC.h"
+
+@interface MySettingsVC ()
 
 @end
 
-@implementation AddProtectionInfoVC
+@implementation MySettingsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +34,4 @@
 }
 */
 
-- (IBAction)agreeProtocol:(UIButton *)sender {
-    [self.navigationController pushViewController:[[UnauthoProtectionInfoVC alloc] init] animated:YES];
-}
 @end
