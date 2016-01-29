@@ -8,7 +8,7 @@
 
 #import "FeedBackVC.h"
 #import "AFNetManager.h"
-@interface FeedBackVC ()
+@interface FeedBackVC ()<UITextFieldDelegate, UITextViewDelegate>
 
 @end
 
@@ -16,49 +16,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.contactWayTF.delegate = self;
+    self.feedBackContent.delegate = self;
+    self.navigationItem.title = @"意见反馈";
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
+    tapGesture.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGesture];
+    self.view.userInteractionEnabled = YES;
 }
 
 
+- (void)tapGesture:(UIGestureRecognizer *)gesture {
+//    [self.contactWayTF resignFirstResponder];
+//    [self.feedBackContent resignFirstResponder];
+    [self.view endEditing:YES];
+}
+
 - (IBAction)feedBackButtonClick:(UIButton *)sender {
-    
     if ([self.feedBackContent.text length] == 0)
     {
         [ToolBox showAlertInfo:@"请输入您的意见"];
         return;
     }else if ( [self.contactWayTF.text length] == 0) {
-        
         [ToolBox showAlertInfo:@"请输入联系方式"];
         return;
     }else {
-//        http://192.168.1.81:8080/linkfoot/opinion/addOpinion.do ? content= & memberId = & contact =
+        NSString *content = [[NSString stringWithFormat:@"%@", self.feedBackContent.text] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *contact = [[NSString stringWithFormat:@"%@", self.contactWayTF.text] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *memberId = [[NSString stringWithFormat:@"%@", @"1010"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:content, @"content", contact, @"contact", memberId, @"memberId", nil];
         
-//        
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(feedBackNotification:) name:@"FeedBack" object:nil];
-//        
-//        NSString *parameter = [NSString stringWithFormat:@"%@content=%@&contact=%@&memberId=%@",@"linkfoot/opinion/addOpinion.do?", self.feedBackContent.text, self.contactWayTF.text, @"1010"];
-//        
-//        
-//        
-//        [[AFNetManager sharedManager] getDataFromServerWithHostUrl:@"http://192.168.1.81:8080/" andParameters:parameter andNotificationName:@"FeedBack"];
-
-        NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[[NSString stringWithFormat:@"%@", self.feedBackContent.text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @"content", [[NSString stringWithFormat:@"%@", self.contactWayTF.text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding], @"contact", @"1010", @"memberId", nil];
-        
-        [[AFNetManager sharedManager] postDataToServerWithHostUrl:@"http://192.168.1.81:8080/linkfoot/opinion/addOpinion.do?" andParameters:parameters andNotificationName:@"FeedBack"];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(feedBackNotification:) name:FeedBack object:nil];
+        [[AFNetManager sharedManager] postDataToServerWithHostUrl:[NSString stringWithFormat:@"%@%@",HostUrl,FeedBack] andParameters:parameters andNotificationName:FeedBack];
     }
-    
-    NSLog(@"login btn click");
-    
-    
 }
 
 - (void)feedBackNotification:(NSNotification *)notification {
-    
-    
     NSDictionary *resultDic = [[NSDictionary alloc] initWithDictionary:notification.userInfo];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"FeedBack" object:nil];
-    NSLog(@"%@",resultDic);
-    
-    NSLog(@"registerNotification");
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:FeedBack object:nil];
+    DLog(@"%@",resultDic);
+    NSDictionary *responseObject = [resultDic objectForKey:@"responseObject"];
+    NSString *msg = [responseObject objectForKey:@"MSG"];
+    [ToolBox showAlertInfo:msg];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    textView.text = @"";
+    return true;
+}
+
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"请留下您的意见（最多输入100字）";
+    }
+    return true;
 }
 @end

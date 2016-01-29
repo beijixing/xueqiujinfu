@@ -10,7 +10,7 @@
 
 @interface MineVC : BaseViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UIImageView *userHead;
+
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 
 @property (strong, nonatomic) IBOutlet UITableView *mineTableView;

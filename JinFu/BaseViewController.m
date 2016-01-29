@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica" size:19.0f], NSFontAttributeName,nil]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica" size:14.0f], NSFontAttributeName,nil]];
     
 //    self.view.backgroundColor = BACKGROUND_COLOR;
     //ios7.0适配
@@ -39,7 +39,7 @@
 
 - (void)setLeftNavigationBarButtonItemWithImage:(NSString *)imageName andAction:(LeftBarButtonItemBlock)action {
 
-    UIButton *leftBtn = [ToolBox createButtonWithFrame:CGRectMake(0, 0, 24, 24) buttonImageName:imageName selector:@selector(leftButtonItemClick) target:self];
+    UIButton *leftBtn = [ToolBox createButtonWithFrame:CGRectMake(0, 0, 10, 15) buttonImageName:imageName selector:@selector(leftButtonItemClick) target:self];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftBarButtonItem;
     

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserInfoInputCell : UITableViewCell
+typedef void(^GetInputTextBlock)(NSString *);
+@interface UserInfoInputCell : UITableViewCell<UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *inputTF;
+@property (nonatomic ,copy) GetInputTextBlock getInputText;
 @end

@@ -11,7 +11,17 @@
 @implementation AddCardNumberCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonViewClick)];
+    [self.buttonView addGestureRecognizer:tapGesture];
+    self.cardNumberTf.delegate = self;
+    self.bankNameTF.delegate = self;
+}
+
+- (void)buttonViewClick {
+    if (self.buttonViewAction) {
+        self.buttonViewAction();
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -20,6 +30,17 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)addButtonClick:(UIButton *)sender {
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    if (self.getCardNumber && self.cardNumberTf == textField) {
+        self.getCardNumber(textField.text);
+    }else if(self.getBankName && self.bankNameTF == textField) {
+        self.getBankName(textField.text);
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

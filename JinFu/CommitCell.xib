@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -35,36 +35,29 @@
                             <action selector="agreeProtocolButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3iO-fS-HwI"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="3iV-KZ-l1L">
-                        <rect key="frame" x="40" y="58" width="240" height="48"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="48" id="k2O-9t-8Bu"/>
-                        </constraints>
-                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8k-Ve-5xD">
                         <rect key="frame" x="40" y="58" width="240" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="48" id="qVk-NP-XvG"/>
+                            <constraint firstAttribute="width" constant="240" id="NDv-nm-lIJ"/>
+                            <constraint firstAttribute="height" constant="48" id="h9o-Zb-2fO"/>
                         </constraints>
+                        <state key="normal" backgroundImage="buyBg.png"/>
                         <connections>
-                            <action selector="commitButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b3y-ve-9sR"/>
+                            <action selector="commitButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qMR-xs-TNs"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dUB-1u-LIC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="8tK-bd-ZQq"/>
-                    <constraint firstItem="L8k-Ve-5xD" firstAttribute="top" secondItem="dUB-1u-LIC" secondAttribute="bottom" constant="22" id="J1c-e5-bTa"/>
-                    <constraint firstItem="L8k-Ve-5xD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="O46-0Q-Q1m"/>
-                    <constraint firstItem="3iV-KZ-l1L" firstAttribute="top" secondItem="dUB-1u-LIC" secondAttribute="bottom" constant="22" id="TB8-jg-GjJ"/>
+                    <constraint firstItem="L8k-Ve-5xD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Tba-Zn-09t"/>
                     <constraint firstItem="Qu1-Qf-HJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="XPk-Ku-9Xb"/>
-                    <constraint firstAttribute="trailing" secondItem="3iV-KZ-l1L" secondAttribute="trailing" constant="40" id="c6f-3X-b6u"/>
-                    <constraint firstAttribute="trailing" secondItem="L8k-Ve-5xD" secondAttribute="trailing" constant="40" id="c9d-rn-wrQ"/>
-                    <constraint firstItem="3iV-KZ-l1L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="fn7-gM-Sia"/>
                     <constraint firstItem="Qu1-Qf-HJF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jal-95-Ihp"/>
                     <constraint firstItem="dUB-1u-LIC" firstAttribute="leading" secondItem="Qu1-Qf-HJF" secondAttribute="trailing" constant="8" id="niJ-pI-4IY"/>
+                    <constraint firstItem="L8k-Ve-5xD" firstAttribute="top" secondItem="dUB-1u-LIC" secondAttribute="bottom" constant="22" id="yRx-cX-Tex"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="agreeImage" destination="Qu1-Qf-HJF" id="kYi-Vo-5k4"/>
                 <outlet property="agreeStateImage" destination="Qu1-Qf-HJF" id="Fwj-br-PXV"/>
             </connections>
         </tableViewCell>

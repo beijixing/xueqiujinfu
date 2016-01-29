@@ -10,4 +10,6 @@
 
 @interface PayWayCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *payWayIcon;
+@property (strong, nonatomic) IBOutlet UILabel *title;
 @end

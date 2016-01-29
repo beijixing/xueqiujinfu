@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TotalPaymentCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *totalCount;
 
 @end

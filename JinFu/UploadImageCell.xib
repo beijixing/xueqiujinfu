@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,147 +16,52 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2AD-Mg-95w">
                         <rect key="frame" x="0.0" y="118" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94509803920000002" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tj2-AQ-iaG">
                         <rect key="frame" x="33" y="3" width="255" height="62"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-vv-ifk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-5M-Lfr">
                                 <rect key="frame" x="0.0" y="1" width="60" height="60"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-shangchuanzhegnjian-zhong.png" translatesAutoresizingMaskIntoConstraints="NO" id="ije-Jh-yDu">
-                                        <rect key="frame" x="15" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="2Yz-pt-MGZ"/>
-                                            <constraint firstAttribute="height" constant="30" id="vpm-Im-Hfd"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8d-Yf-ysf">
-                                        <rect key="frame" x="2" y="39" width="56" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="6ud-WD-eFL"/>
-                                            <constraint firstAttribute="width" constant="56" id="9Zd-I5-Kbd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="J8d-Yf-ysf" firstAttribute="top" secondItem="ije-Jh-yDu" secondAttribute="bottom" constant="1" id="6Ld-sb-1IR"/>
-                                    <constraint firstAttribute="width" constant="60" id="8tW-ww-9nu"/>
-                                    <constraint firstAttribute="height" constant="60" id="YhJ-KJ-NPr"/>
-                                    <constraint firstItem="ije-Jh-yDu" firstAttribute="top" secondItem="nwA-vv-ifk" secondAttribute="top" constant="8" id="gKS-dL-P7w"/>
-                                    <constraint firstItem="ije-Jh-yDu" firstAttribute="leading" secondItem="nwA-vv-ifk" secondAttribute="leading" constant="15" id="nu9-nh-5n1"/>
-                                    <constraint firstItem="J8d-Yf-ysf" firstAttribute="leading" secondItem="nwA-vv-ifk" secondAttribute="leading" constant="2" id="rLs-np-veN"/>
+                                    <constraint firstAttribute="height" constant="60" id="F5H-BP-XaG"/>
+                                    <constraint firstAttribute="width" constant="60" id="crO-nH-1o3"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qef-DF-PcV">
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="VDr-BR-dah">
                                 <rect key="frame" x="65" y="1" width="60" height="60"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-shangchuanzhegnjian-zhong.png" translatesAutoresizingMaskIntoConstraints="NO" id="1PI-tk-Zjl">
-                                        <rect key="frame" x="15" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="szB-bK-dxN"/>
-                                            <constraint firstAttribute="height" constant="30" id="yCM-Y8-4y2"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTc-xZ-aIy">
-                                        <rect key="frame" x="2" y="39" width="56" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="6Cv-Yh-SwV"/>
-                                            <constraint firstAttribute="width" constant="56" id="YDz-0b-CPM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="1PI-tk-Zjl" firstAttribute="top" secondItem="qef-DF-PcV" secondAttribute="top" constant="8" id="2Lg-cO-kpu"/>
-                                    <constraint firstAttribute="width" constant="60" id="LBM-uP-Aze"/>
-                                    <constraint firstItem="VTc-xZ-aIy" firstAttribute="leading" secondItem="qef-DF-PcV" secondAttribute="leading" constant="2" id="XDL-38-wVJ"/>
-                                    <constraint firstItem="VTc-xZ-aIy" firstAttribute="top" secondItem="1PI-tk-Zjl" secondAttribute="bottom" constant="1" id="YdL-An-1rk"/>
-                                    <constraint firstAttribute="height" constant="60" id="nBH-0c-7TU"/>
-                                    <constraint firstItem="1PI-tk-Zjl" firstAttribute="leading" secondItem="qef-DF-PcV" secondAttribute="leading" constant="15" id="xfK-8A-VaX"/>
+                                    <constraint firstAttribute="width" constant="60" id="QmW-Ec-36h"/>
+                                    <constraint firstAttribute="height" constant="60" id="Vzu-Qy-mGT"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekV-WK-ktn">
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="BQf-kO-VBu">
                                 <rect key="frame" x="130" y="1" width="60" height="60"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-shangchuanzhegnjian-zhong.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jl3-Mp-FsR">
-                                        <rect key="frame" x="15" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="4us-Qr-eHD"/>
-                                            <constraint firstAttribute="height" constant="30" id="tIE-Ho-YfY"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bol-ld-g3n">
-                                        <rect key="frame" x="1" y="39" width="58" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Ooy-zq-9pc"/>
-                                            <constraint firstAttribute="width" constant="58" id="zGA-Es-dsi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Dw0-dF-GEc"/>
-                                    <constraint firstItem="Bol-ld-g3n" firstAttribute="leading" secondItem="ekV-WK-ktn" secondAttribute="leading" constant="1" id="GLi-IR-YLG"/>
-                                    <constraint firstItem="Bol-ld-g3n" firstAttribute="top" secondItem="Jl3-Mp-FsR" secondAttribute="bottom" constant="1" id="GdG-OG-Rgf"/>
-                                    <constraint firstAttribute="width" constant="60" id="T6J-1N-iOP"/>
-                                    <constraint firstItem="Jl3-Mp-FsR" firstAttribute="top" secondItem="ekV-WK-ktn" secondAttribute="top" constant="8" id="te9-vf-NHI"/>
-                                    <constraint firstItem="Jl3-Mp-FsR" firstAttribute="leading" secondItem="ekV-WK-ktn" secondAttribute="leading" constant="15" id="xJf-Qh-QQl"/>
+                                    <constraint firstAttribute="height" constant="60" id="MHJ-TY-5u2"/>
+                                    <constraint firstAttribute="width" constant="60" id="bRX-Tk-Eie"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsI-tQ-itl">
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uploadDefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Zs-MX-gsb">
                                 <rect key="frame" x="195" y="1" width="60" height="60"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-shangchuanzhegnjian-zhong.png" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-FD-f7n">
-                                        <rect key="frame" x="15" y="8" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="DHA-Ge-ep9"/>
-                                            <constraint firstAttribute="width" constant="30" id="vK9-EL-tRT"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传图片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ned-Lj-wac">
-                                        <rect key="frame" x="2" y="39" width="56" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="CvA-Ng-UD5"/>
-                                            <constraint firstAttribute="width" constant="56" id="kHv-1F-tOg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ned-Lj-wac" firstAttribute="leading" secondItem="BsI-tQ-itl" secondAttribute="leading" constant="2" id="3VP-Hh-xDS"/>
-                                    <constraint firstItem="Ned-Lj-wac" firstAttribute="top" secondItem="GWa-FD-f7n" secondAttribute="bottom" constant="1" id="4he-CC-QNc"/>
-                                    <constraint firstAttribute="width" constant="60" id="6Ro-gG-2kJ"/>
-                                    <constraint firstItem="GWa-FD-f7n" firstAttribute="top" secondItem="BsI-tQ-itl" secondAttribute="top" constant="8" id="85V-bw-4Yu"/>
-                                    <constraint firstAttribute="height" constant="60" id="Pgf-Ha-Z4o"/>
-                                    <constraint firstItem="GWa-FD-f7n" firstAttribute="leading" secondItem="BsI-tQ-itl" secondAttribute="leading" constant="15" id="R04-QP-fdr"/>
+                                    <constraint firstAttribute="height" constant="60" id="KEY-gg-DdW"/>
+                                    <constraint firstAttribute="width" constant="60" id="McA-a8-1Oo"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BsI-tQ-itl" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="9Wj-ZV-fnK"/>
-                            <constraint firstItem="qef-DF-PcV" firstAttribute="leading" secondItem="nwA-vv-ifk" secondAttribute="trailing" constant="5" id="C3F-Td-Hhs"/>
-                            <constraint firstItem="ekV-WK-ktn" firstAttribute="leading" secondItem="qef-DF-PcV" secondAttribute="trailing" constant="5" id="CAb-NH-yYP"/>
-                            <constraint firstItem="qef-DF-PcV" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="E2X-xl-2Ak"/>
-                            <constraint firstItem="nwA-vv-ifk" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="Gpq-3t-AWy"/>
-                            <constraint firstItem="ekV-WK-ktn" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="KZ9-Jd-qSJ"/>
-                            <constraint firstItem="nwA-vv-ifk" firstAttribute="leading" secondItem="Tj2-AQ-iaG" secondAttribute="leading" id="SSZ-nr-yFE"/>
-                            <constraint firstItem="BsI-tQ-itl" firstAttribute="leading" secondItem="ekV-WK-ktn" secondAttribute="trailing" constant="5" id="UkG-eg-GJr"/>
+                            <constraint firstItem="0PL-5M-Lfr" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="Ewz-xT-BI7"/>
+                            <constraint firstItem="7Zs-MX-gsb" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="Q8m-oQ-I9E"/>
+                            <constraint firstItem="7Zs-MX-gsb" firstAttribute="leading" secondItem="BQf-kO-VBu" secondAttribute="trailing" constant="5" id="Rk8-8U-dek"/>
+                            <constraint firstItem="VDr-BR-dah" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="Wov-ZB-jxG"/>
+                            <constraint firstItem="VDr-BR-dah" firstAttribute="leading" secondItem="0PL-5M-Lfr" secondAttribute="trailing" constant="5" id="YOH-XV-8iy"/>
+                            <constraint firstItem="BQf-kO-VBu" firstAttribute="leading" secondItem="VDr-BR-dah" secondAttribute="trailing" constant="5" id="bKo-I9-GkA"/>
                             <constraint firstAttribute="width" constant="255" id="jWR-WV-lk9"/>
+                            <constraint firstItem="0PL-5M-Lfr" firstAttribute="leading" secondItem="Tj2-AQ-iaG" secondAttribute="leading" id="rNG-8o-nP6"/>
                             <constraint firstAttribute="height" constant="62" id="siR-34-WFI"/>
+                            <constraint firstItem="BQf-kO-VBu" firstAttribute="top" secondItem="Tj2-AQ-iaG" secondAttribute="top" constant="1" id="vm7-bQ-6jm"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请上传您的证件图片（支持jpg、png，每张图片最大10M最多4张）" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMM-Dk-dFl">
@@ -178,15 +83,16 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="firstImage" destination="ije-Jh-yDu" id="Oi6-fJ-WTb"/>
-                <outlet property="fourthImage" destination="GWa-FD-f7n" id="9ag-3m-V6z"/>
-                <outlet property="secondImage" destination="1PI-tk-Zjl" id="uRb-ON-bqh"/>
-                <outlet property="thirdImage" destination="Jl3-Mp-FsR" id="wci-96-CEX"/>
+                <outlet property="desc" destination="fMM-Dk-dFl" id="Ksi-FP-ysS"/>
+                <outlet property="firstImage" destination="0PL-5M-Lfr" id="Dvz-AU-M5Z"/>
+                <outlet property="fourthImage" destination="7Zs-MX-gsb" id="7cq-WQ-3Z7"/>
+                <outlet property="secondImage" destination="VDr-BR-dah" id="Epf-aD-PAj"/>
+                <outlet property="thirdImage" destination="BQf-kO-VBu" id="jtS-01-ezw"/>
             </connections>
             <point key="canvasLocation" x="284" y="326"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="iconfont-shangchuanzhegnjian-zhong.png" width="20" height="20"/>
+        <image name="uploadDefault.png" width="130" height="130"/>
     </resources>
 </document>

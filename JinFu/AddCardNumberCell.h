@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void(^AddRowViewClickBlock) (void);
+typedef void (^GetAddedCardInfoBlock)(NSString *);
 
-@interface AddCardNumberCell : UITableViewCell
+@interface AddCardNumberCell : UITableViewCell<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTf;
-- (IBAction)addButtonClick:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UITextField *bankNameTF;
+
+@property (strong, nonatomic) IBOutlet UIView *buttonView;
+@property (nonatomic, copy)AddRowViewClickBlock buttonViewAction;
+@property (nonatomic, copy)GetAddedCardInfoBlock getCardNumber;
+@property (nonatomic, copy)GetAddedCardInfoBlock getBankName;
 
 @end

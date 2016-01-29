@@ -36,8 +36,7 @@
     mineNav.tabBarItem.image = [[UIImage imageNamed:@"tabBar3"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     ;
-//    [UIColor colorWithRed:160/255 green:160/255 blue:160/255 alpha:1.0]
-//    [UIColor colorWithRed:240/255 green:190/255 blue:20/255 alpha:1.0]
+
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:ColorWithRGB(160, 160, 160), NSForegroundColorAttributeName, [UIFont fontWithName:@"Helvetica" size:15.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:ColorWithRGB(240, 190, 20), NSForegroundColorAttributeName, [UIFont fontWithName:@"Helvetica" size:15.0], NSFontAttributeName, nil] forState:UIControlStateSelected];
     

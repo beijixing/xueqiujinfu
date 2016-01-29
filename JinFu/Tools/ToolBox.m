@@ -167,6 +167,12 @@
     return webView;
 }
 
++ (UIWebView *)createWebViewWithFrame:(CGRect)frame andHtmlString:(NSString *)htmlStr {
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:frame];
+    [webView loadHTMLString:htmlStr baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle]  bundlePath]]];
+    return webView;
+}
+
 #pragma mark --UIAlertView
 + (UIAlertView *)showAlertInfo:(NSString *)alertStr {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:alertStr delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
@@ -179,5 +185,89 @@
     return alert;
 }
 
+#pragma mark 日期和时间处理
+/*
+ NSTimeZone* localzone = [NSTimeZone localTimeZone];
+ 封装成单例更好
+ */
++(NSString *)getDateStringWithDate:(NSString *)date dateFormat:(NSString *)format destFormat:(NSString *)destFormat {
+    NSDateFormatter *dateFormater = [[DateFormatterManager sharedManager] getDateFormater];
+    dateFormater.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+
+    [dateFormater setDateFormat:format];
+    NSDate *dateNew = [dateFormater dateFromString:date];
+//    DLog(@"dateNew = %@", dateNew);
+    [dateFormater setDateFormat:destFormat];
+    NSString*destDateString = [dateFormater stringFromDate:dateNew];
+//    DLog(@"rdate = %@" ,destDateString);
+    return destDateString;
+}
+
++ (NSString*)getDaysBetweenEndDate:(NSString* )endDate andStartDate:(NSString *)startDate withDateFormat:(NSString *)format{
+    
+    NSDateFormatter *df = [[DateFormatterManager sharedManager] getDateFormater];
+    [df setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    df.dateFormat = format;
+    
+    NSDate *eDate = [df dateFromString:endDate];
+    NSDate *sDate = [df dateFromString:startDate];
+    
+    long eSeconds = [eDate timeIntervalSince1970];
+    long sSeconds = [sDate timeIntervalSince1970];
+    
+    long seconds = eSeconds - sSeconds;
+    
+    CGFloat days = 0.0f;
+    if ( seconds > 0.1f ){
+       days = (CGFloat)seconds/(CGFloat)(24*60*60);
+    }
+    NSString *daysStr = [NSString stringWithFormat:@"%.0f", days];
+    return daysStr;
+}
+
+//单个字符分割的字符串提取
++(void)splitString:(NSString *)targetStr withCharacter:(NSString *)divideStr andSubstrArr:(NSMutableArray *)subStrArr{
+    
+    NSRange range = [targetStr rangeOfString:divideStr];
+    if (range.location != NSNotFound) {
+        NSString *subStr = [targetStr substringToIndex:range.location];
+        [subStrArr addObject:subStr];
+        NSString *leftStr = [targetStr substringFromIndex:range.location+1];
+        [self splitString:leftStr withCharacter:divideStr andSubstrArr:subStrArr];
+    }else{
+        [subStrArr addObject:targetStr];
+    }
+}
+
+
+@end
+
+
+
+@interface DateFormatterManager ()
+{
+    NSDateFormatter *_dateFormater;
+}
+@end
+@implementation DateFormatterManager
+
++ (instancetype)sharedManager {
+    static DateFormatterManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[DateFormatterManager alloc] init];
+    });
+    return manager;
+}
+
+- (NSDateFormatter*)getDateFormater {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _dateFormater = [[NSDateFormatter alloc] init];
+        _dateFormater.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+
+    });
+    return _dateFormater;
+}
 
 @end

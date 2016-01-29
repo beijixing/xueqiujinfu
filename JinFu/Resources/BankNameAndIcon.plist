@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>北京银行</key>
+	<string>icon_beijing</string>
+	<key>工商银行</key>
+	<string>icon_gongshang</string>
+	<key>工行</key>
+	<string>icon_gongshang</string>
+	<key>光大银行</key>
+	<string>icon_guangda</string>
+	<key>广发银行</key>
+	<string>icon_guangfa</string>
+	<key>华夏银行</key>
+	<string>icon_huaxia</string>
+	<key>建设银行</key>
+	<string>icon_jianshe</string>
+	<key>建行</key>
+	<string>icon_jianshe</string>
+	<key>交通银行</key>
+	<string>icon_jiaotong</string>
+	<key>交行</key>
+	<string>icon_jiaotong</string>
+	<key>中国民生银行</key>
+	<string>icon_minsheng</string>
+	<key>民生银行</key>
+	<string>icon_minsheng</string>
+	<key>平安银行</key>
+	<string>icon_pingan</string>
+	<key>浦发银行</key>
+	<string>icon_pufa</string>
+	<key>邮政储蓄银行</key>
+	<string>icon_youzheng</string>
+	<key>邮政银行</key>
+	<string>icon_youzheng</string>
+	<key>邮储银行</key>
+	<string>icon_youzheng</string>
+	<key>招商银行</key>
+	<string>icon_zhaoshang</string>
+	<key>招行</key>
+	<string>icon_zhaoshang</string>
+	<key>中国银行</key>
+	<string>icon_zhongguo</string>
+	<key>中信银行</key>
+	<string>icon_zhongxin</string>
+	<key>兴业银行</key>
+	<string>icon_xingye</string>
+</dict>
+</plist>

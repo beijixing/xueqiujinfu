@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -23,9 +23,9 @@
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoshuabaozhang.png" translatesAutoresizingMaskIntoConstraints="NO" id="L14-O9-5t1">
-                        <rect key="frame" x="18" y="4" width="35" height="40"/>
+                        <rect key="frame" x="18" y="6" width="35" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="av4-tT-Vcm"/>
+                            <constraint firstAttribute="height" constant="35" id="av4-tT-Vcm"/>
                             <constraint firstAttribute="width" constant="35" id="ezQ-to-wYh"/>
                         </constraints>
                     </imageView>
@@ -41,7 +41,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="L14-O9-5t1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="0yC-3W-sgy"/>
+                    <constraint firstItem="L14-O9-5t1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="0yC-3W-sgy"/>
                     <constraint firstAttribute="trailing" secondItem="iwS-f4-8pB" secondAttribute="trailing" id="5Rz-Dz-UY3"/>
                     <constraint firstItem="O5F-zl-Jvi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="OSx-b6-TXp"/>
                     <constraint firstItem="iwS-f4-8pB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RSX-ze-icn"/>

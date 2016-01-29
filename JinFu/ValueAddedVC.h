@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ValueAddedVC : UIViewController
+@interface ValueAddedVC : UIViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *valueAddedServiceTable;
 
 @end

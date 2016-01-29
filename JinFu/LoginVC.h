@@ -23,7 +23,6 @@
 - (IBAction)loginBtnClick:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet UIImageView *rememberPswdImage;
-
 @property (strong, nonatomic) IBOutlet UIImageView *agreeAuthorizationImage;
 
 @property (strong, nonatomic) IBOutlet UIView *emailContainerView;

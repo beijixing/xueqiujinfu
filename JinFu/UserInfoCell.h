@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UserInfoCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *keyText;
 
+@property (strong, nonatomic) IBOutlet UILabel *valueText;
 @end

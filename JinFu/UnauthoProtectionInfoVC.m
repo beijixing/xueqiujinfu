@@ -8,6 +8,7 @@
 
 #import "UnauthoProtectionInfoVC.h"
 #import "ProtectionTitleCell.h"
+#import "UnauthoPayServiceVC.h"
 
 @interface UnauthoProtectionInfoVC ()
 

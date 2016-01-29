@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PullDownMenu.h"
 @interface ServicePeriodCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *period;
-@property (weak, nonatomic) IBOutlet UIImageView *rightArrow;
-
-@property (weak, nonatomic) IBOutlet UIImageView *downArrow;
+@property (nonatomic, copy) ShowAndHideListViewEvent showListViewEvent;
+@property (nonatomic, copy) ShowAndHideListViewEvent hideListViewEvent;
+@property (nonatomic, copy) GetSelectedDataIdxBlock getSelectedText;
+- (void)setBlock;
+- (void)setPullMenuState:(BOOL)state;
+- (void)setSelectDataIdx:(NSInteger)idx;
+//- (void)setIndicatorImageName:(NSString *)imageName;
+- (void)setpullMenuDataSoure:(NSArray *)dataSource;
 @end

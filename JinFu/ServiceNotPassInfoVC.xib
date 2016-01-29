@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceNotPassInfoVC">
+            <connections>
+                <outlet property="unPassDescTextView" destination="cn1-Mi-ICz" id="4ES-Dd-wnd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leO-er-yZW">
+                    <rect key="frame" x="72" y="326" width="176" height="40"/>
+                    <color key="backgroundColor" red="0.11372549019607843" green="0.74901960784313726" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="leO-er-yZW" secondAttribute="height" multiplier="22:5" id="Fhw-Ed-MaQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="重新编辑">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="reeditButtonClick:" destination="-1" eventType="touchUpInside" id="aJ4-qj-PxD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="说明：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQA-a8-HKf">
+                    <rect key="frame" x="9" y="16" width="303" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WQA-a8-HKf" secondAttribute="height" multiplier="101:7" id="v98-86-DPM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-Mi-ICz">
+                    <rect key="frame" x="8" y="45" width="304" height="235"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cn1-Mi-ICz" secondAttribute="height" multiplier="304:235" id="qWc-XT-bww"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cn1-Mi-ICz" secondAttribute="trailing" constant="8" id="10Z-aJ-k2g"/>
+                <constraint firstAttribute="trailing" secondItem="leO-er-yZW" secondAttribute="trailing" constant="72" id="63Y-8g-Th5"/>
+                <constraint firstItem="cn1-Mi-ICz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Fc5-Ue-dT6"/>
+                <constraint firstItem="leO-er-yZW" firstAttribute="top" secondItem="cn1-Mi-ICz" secondAttribute="bottom" constant="46" id="SNU-Q7-gGI"/>
+                <constraint firstItem="WQA-a8-HKf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="9" id="V3K-fp-oK6"/>
+                <constraint firstAttribute="trailing" secondItem="WQA-a8-HKf" secondAttribute="trailing" constant="8" id="XnS-Ea-9jd"/>
+                <constraint firstItem="cn1-Mi-ICz" firstAttribute="top" secondItem="WQA-a8-HKf" secondAttribute="bottom" constant="8" id="ZZT-W8-23R"/>
+                <constraint firstItem="leO-er-yZW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="72" id="dFN-fX-wU7"/>
+                <constraint firstItem="WQA-a8-HKf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="vM0-7P-Li0"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

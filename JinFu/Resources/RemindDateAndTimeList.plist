@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>preRemindDay</key>
+	<dict>
+		<key>1</key>
+		<string>1天</string>
+		<key>2</key>
+		<string>2天</string>
+		<key>3</key>
+		<string>3天</string>
+	</dict>
+	<key>remindTime</key>
+	<dict>
+		<key>1</key>
+		<string>8:00 - 10:00</string>
+		<key>2</key>
+		<string>10:00 - 12:00</string>
+		<key>3</key>
+		<string>12:00 - 14:00</string>
+		<key>4</key>
+		<string>14:00 - 16:00</string>
+		<key>5</key>
+		<string>16:00 - 18:00</string>
+	</dict>
+</dict>
+</plist>

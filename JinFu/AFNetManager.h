@@ -14,4 +14,7 @@
 - (void)getDataFromServerWithHostUrl:(NSString *)url andParameters:(NSString *)parameter andNotificationName:(NSString *)noticeName;
 
 -(void)postDataToServerWithHostUrl:(NSString *)url andParameters:(NSDictionary *)parameterDic andNotificationName:(NSString *)noticeName;
+
+- (void)uploadImageWithURLString:(NSString *)fullUrl andParameters:(NSDictionary *)parameterDic andImagePath:(NSString *)imagePath andNotificationName:(NSString *)noticeName;
+
 @end

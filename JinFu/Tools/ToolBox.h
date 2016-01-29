@@ -12,8 +12,6 @@
 
 @interface ToolBox : NSObject
 
-
-
 + (UIView *)createViewWithFrame:(CGRect)frame;
 + (UIView *)createViewWithFrame:(CGRect)frame andBackgroundColor:(UIColor *)backgroundColor;
 + (UIView *)createViewWithFrame:(CGRect)frame andBackgroundColor:(UIColor *)backgroundColor andIsHidden:(BOOL)isHidden;
@@ -48,6 +46,7 @@
 + (UIWebView *)createWebViewWithFrame:(CGRect)frame localResourceName:(NSString *)fileName resType:(NSString *)resType;
 
 + (UIWebView *)createWebViewWithFrame:(CGRect)frame andUrl:(NSString *)url;
++ (UIWebView *)createWebViewWithFrame:(CGRect)frame andHtmlString:(NSString *)htmlStr;
 
 //UIAlertController UIAlertView
 + (UIAlertView *)showAlertInfo:(NSString *)alertStr;
@@ -69,4 +68,20 @@
 //UIProgressView
 + (UIProgressView *)createProgressViewWithFrame:(CGRect)frame;
 
+
+
+//日期相减获得天数
++ (NSString *)getDateStringWithDate:(NSString *)date dateFormat:(NSString *)format destFormat:(NSString *)destFormat;
+
++ (NSString*)getDaysBetweenEndDate:(NSString* )endDate andStartDate:(NSString *)startDate withDateFormat:(NSString *)format;
+
+
+//字符串处理
++ (void)splitString:(NSString *)targetStr withCharacter:(NSString *)divideStr andSubstrArr:(NSMutableArray *)subStrArr;
+@end
+
+
+@interface DateFormatterManager : NSObject
++ (instancetype)sharedManager;
+- (NSDateFormatter*)getDateFormater;
 @end

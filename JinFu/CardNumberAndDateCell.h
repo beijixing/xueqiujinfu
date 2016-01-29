@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef void(^AddCellBlock) (void);
+typedef void (^GetCardInfoBlock)(NSString *);
 
-@interface CardNumberAndDateCell : UITableViewCell
+
+@interface CardNumberAndDateCell : UITableViewCell<UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *bankNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *cardNumberTF;
-@property (weak, nonatomic) IBOutlet UIButton *addButtonClick;
-@property (weak, nonatomic) IBOutlet UILabel *billDate;
-
+@property (strong, nonatomic) IBOutlet UITextField *billDateTF;
+@property (strong, nonatomic) IBOutlet UIView *addButtonView;
+@property (nonatomic, copy) AddCellBlock buttonViewAction;
+@property (nonatomic, copy) GetCardInfoBlock cardNumberBlcok;
+@property (nonatomic, copy) GetCardInfoBlock billDateBlcok;
+@property (nonatomic, copy) GetCardInfoBlock bankNameBlcok;
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface UnauthoProtectionVC : UIViewController
+#import "ServiceTypeDataModel.h"
+@interface UnauthoProtectionVC : BaseViewController
+@property (strong, nonatomic) IBOutlet UITextView *descTextView;
 - (IBAction)buyServiceBtnClick:(UIButton *)sender;
-
+@property(strong, nonatomic) ServiceTypeDataModel *serviceInfo;
 @end
