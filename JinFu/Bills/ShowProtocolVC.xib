@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowProtocolVC">
+            <connections>
+                <outlet property="protocolTextView" destination="FGs-XM-fCU" id="rAh-hF-zUS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGs-XM-fCU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">雪球金服解析网银数据协议
+
+一、网银直连服务概要
+网银直连服务：即用户可以通过本司提供的网银直连插件，直接从银行的网银获取、收集、处理、汇集自己的网银账单的服务。
+雪球金服数据：即用户通过使用网银直连服务，并授权解析后获得的供雪球金服信用卡管家使用的标准化数据。
+1.获取网银数据：即用户使用本司的网银直连插件，可以实现全自动、封闭地获取用户个人网银上的的原始数据文件。
+2.解析网银数据： 即用户获得原始数据文件后，授权本司解析您的原始网银数据文件，将原始数据转化、汇集成可供雪球金服产品使用的标准化的雪球金服数据，提供专业的、标准的网银账单管理服务。
+3.独有的数据解析技术：即用户主动授权予我司解析原始数据文件，解析过程中将会使用到深圳市随手网科技有限公司（以下简称“随手网络”）提供的包括自动归类、自动区分收支转等一系列独有的数据解析技术。
+二、网银账号信息安全
+1.本司重视用户的隐私保护，整个网银直连服务全程无人工干预，防止网银账号信息在源头上的外泄。
+2.本司提供的网银直连服务仅是一个数据获取的工具，需由用户或授权终端主动发起。服务本身不会保存登录网银所需的网银账号和登录密码，请妥善保管好个人网银的登录密码。每个用户都要对其“雪球金服”中的所有内容负完全责任，本司不对涉及网银登录的相关信息的泄露及引发的其他问题负有责任，用户若发现有自己的网银帐号被他人非法使用或存在安全漏洞的情况，应立即通知银行和公安机关。
+3.用户可以使用雪球金服信用卡管家提供记住网银登录密码的服务，方便随时更新数据，保存的网银登录密码采用可靠的安全技术手段进行严格的管理和保护。如不再需要雪球金服保存您的网银登录密码，可在雪球金服产品中的设置—数据源删除相应网银账号信息，并在下一次使用网银直连服务的时候不再勾选“记住密码”功能。
+三、雪球金服数据使用说明
+在您同意本协议的前提下，雪球金服数据将在本司服务器储存您所拥有的雪球金服数据，以便本司进行网银直连服务的优化及提升。
+网银直连服务仅在雪球金服信用卡管家或本司其他正式发布的客户端中使用，请妥善保管好您的手机，并在正规的应用市场渠道中下载本司正式发布的产品，防止雪球金服数据的外泄。如在市面上发现有仿冒我司的产品，应立即通知随手网络公司。
+四、个人资料和隐私保护
+在未经您同意和确认之前，除国家法律、地方法规和政府规章规定之外，本司绝不会把您的任何个人信息提供给第三方（包括公司或个人）。
+在您同意本协议的前提下，本司允许少数专门从事数据解析的工作人员去分析网银直连日志，由于数据解析功能本身可能会涉及用户的个人信息，本司将与相关工作人员签署保密协议等方式保证用户信息不会外泄。
+在您同意本协议的前提下，本司采用行业标准以维护您的个人资料的隐私性，并用可靠的安全技术后端保护已存储的个人信息，对您所提供的个人资料进行严格的管理和保护及在上传后30天后删除相关的错误日志，防止个人资料丢失、被盗用或遭窜改。
+本司提供的网银直连服务是一个插件工具，无论确认使用者是否为网银账号的拥有者，请您务必只在个人设备上使用网银直连服务器，不要随意透露或在他人的设备上使用该服务，防止个人资料和隐私泄露。</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FGs-XM-fCU" secondAttribute="trailing" id="2Xe-8h-XiQ"/>
+                <constraint firstItem="FGs-XM-fCU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7wx-88-xbt"/>
+                <constraint firstAttribute="bottom" secondItem="FGs-XM-fCU" secondAttribute="bottom" id="Omo-Yr-c1o"/>
+                <constraint firstItem="FGs-XM-fCU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mfU-af-iDI"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

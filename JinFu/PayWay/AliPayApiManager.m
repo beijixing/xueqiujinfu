@@ -10,6 +10,7 @@
 #import "Order.h"
 #import "DataSigner.h"
 #import <AlipaySDK/AlipaySDK.h>
+#import "AFNetManager.h"
 
 @implementation AliPayApiManager
 +(instancetype)sharedManager{
@@ -21,7 +22,9 @@
     return manager;
 }
 
-- (NSString *)payOrder {
+- (void)payOrderWithCost:(NSString*)cost subject:(NSString*)subject {
+    
+    [self sendAlipayRequstWithCost:cost subject:subject];
     /*
      *点击获取prodcut实例并初始化订单信息
      */
@@ -53,7 +56,7 @@
                                               cancelButtonTitle:@"确定"
                                               otherButtonTitles:nil];
         [alert show];
-        return @"出错啦";
+        DLog(@"出错啦");
     }
     
     /*
@@ -100,7 +103,35 @@
             }
         }];
     }
-    return @"hello alipay";
+    
+}
+
+- (void)sendAlipayRequstWithCost:(NSString*)cost subject:(NSString*)subject {
+    NSDictionary *parasDct = @{@"cost":cost,
+                               @"subject":subject
+                               };
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(alipayNotification:) name:Alipayinfo object:nil];
+    [[AFNetManager sharedManager] postDataToServerWithHostUrl:[NSString stringWithFormat:@"%@%@",HostUrl, Alipayinfo] andParameters:parasDct andNotificationName:Alipayinfo];
+}
+
+- (void)alipayNotification:(NSNotification *)notification {
+    NSDictionary *userInfo = [NSDictionary dictionaryWithDictionary:notification.userInfo];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:Alipayinfo object:nil];
+    NSDictionary *resultDict = [userInfo objectForKey:@"responseObject"];
+    DLog(@"%@", resultDict);
+    if(resultDict != nil){
+        NSMutableString *retcode = [resultDict objectForKey:@"return_code"];
+        if ([retcode isEqualToString:@"SUCCESS"] == 0){
+           
+    
+      
+       
+        }else{
+            DLog("%@", [resultDict objectForKey:@"return_msg"]);
+        }
+    }else{
+        DLog(@"服务器返回错误，未获取到json对象");
+    }
 }
 
 @end

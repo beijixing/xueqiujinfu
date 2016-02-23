@@ -19,5 +19,5 @@
 
 @property (nonatomic, assign) id<AliPayApiManagerDelegate> delegate;
 
-- (NSString *)payOrder;
+- (void)payOrderWithCost:(NSString*)cost subject:(NSString*)subject;
 @end

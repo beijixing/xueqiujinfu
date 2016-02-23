@@ -33,6 +33,6 @@
 
 + (instancetype)sharedManager;
 
-- (NSString *)payOrder;
+- (void)payOrderWithCost:(NSString*)cost subject:(NSString*)subject;
 
 @end

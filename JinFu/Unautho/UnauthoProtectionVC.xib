@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnauthoProtectionVC">
+            <connections>
+                <outlet property="descTextView" destination="u7T-A0-el8" id="I00-aN-Obu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-sg-50o">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJP-q7-X75">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYe-lk-CG8">
+                                    <rect key="frame" x="49" y="390" width="223" height="41"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="gYe-lk-CG8" secondAttribute="height" multiplier="223:41" id="3Pk-nG-qrF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" backgroundImage="buyProtection.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buyServiceBtnClick:" destination="-1" eventType="touchUpInside" id="htS-bi-ekW"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u7T-A0-el8">
+                                    <rect key="frame" x="8" y="161" width="304" height="200"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="u7T-A0-el8" secondAttribute="height" multiplier="38:25" id="9b1-il-8yB"/>
+                                    </constraints>
+                                    <string key="text">通过大屏幕演示，李彦宏现场讲解了百度无人驾驶车的技术储备、路测实况、行业突破等内容。
+
+　　百度无人驾驶车于本月上旬在国内首次实现城市、环路及高速道路混合路况下的全自动驾驶。随后，百度公司宣布成立自动驾驶事业部，聚焦技术研发、生态建设与产业落地，加快研发普通城市道路的无人驾驶技术，计划三年商用化，五年实现量产。
+
+</string>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beijing-daoshuaaozhang.png" translatesAutoresizingMaskIntoConstraints="NO" id="fwa-y5-Qdb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="fwa-y5-Qdb" secondAttribute="height" multiplier="2:1" id="Qc6-Os-aI5"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daoshaubaozhang-tubiao.png" translatesAutoresizingMaskIntoConstraints="NO" id="nXv-CY-aIT">
+                                    <rect key="frame" x="111" y="32" width="98" height="98"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="98" id="qXT-ce-yes"/>
+                                        <constraint firstAttribute="width" constant="98" id="unv-Zf-opE"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="u7T-A0-el8" firstAttribute="top" secondItem="fwa-y5-Qdb" secondAttribute="bottom" constant="1" id="2x2-Wh-xSh"/>
+                                <constraint firstAttribute="height" constant="519" id="58D-P8-Xxv"/>
+                                <constraint firstAttribute="trailing" secondItem="u7T-A0-el8" secondAttribute="trailing" constant="8" id="68R-1n-cZ4"/>
+                                <constraint firstItem="gYe-lk-CG8" firstAttribute="leading" secondItem="bJP-q7-X75" secondAttribute="leading" constant="49" id="EA5-kY-gWx"/>
+                                <constraint firstItem="nXv-CY-aIT" firstAttribute="centerX" secondItem="bJP-q7-X75" secondAttribute="centerX" id="Oc2-7E-8Gw"/>
+                                <constraint firstItem="nXv-CY-aIT" firstAttribute="top" secondItem="bJP-q7-X75" secondAttribute="top" constant="32" id="VfA-I6-jug"/>
+                                <constraint firstItem="fwa-y5-Qdb" firstAttribute="top" secondItem="bJP-q7-X75" secondAttribute="top" id="aYc-Gv-dEd"/>
+                                <constraint firstItem="gYe-lk-CG8" firstAttribute="top" secondItem="u7T-A0-el8" secondAttribute="bottom" constant="29" id="bQq-qr-iZr"/>
+                                <constraint firstItem="fwa-y5-Qdb" firstAttribute="leading" secondItem="bJP-q7-X75" secondAttribute="leading" id="u3s-pG-lED"/>
+                                <constraint firstAttribute="trailing" secondItem="gYe-lk-CG8" secondAttribute="trailing" constant="48" id="vzw-QW-LKp"/>
+                                <constraint firstItem="u7T-A0-el8" firstAttribute="leading" secondItem="bJP-q7-X75" secondAttribute="leading" constant="8" id="x2R-It-nJv"/>
+                                <constraint firstAttribute="trailing" secondItem="fwa-y5-Qdb" secondAttribute="trailing" id="zx5-H1-X1v"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="bJP-q7-X75" firstAttribute="leading" secondItem="Jf7-sg-50o" secondAttribute="leading" id="640-Ar-nYY"/>
+                        <constraint firstItem="bJP-q7-X75" firstAttribute="width" secondItem="Jf7-sg-50o" secondAttribute="width" id="6IU-gm-pB7"/>
+                        <constraint firstAttribute="bottom" secondItem="bJP-q7-X75" secondAttribute="bottom" id="Gdu-7G-i3c"/>
+                        <constraint firstAttribute="trailing" secondItem="bJP-q7-X75" secondAttribute="trailing" id="QPi-BZ-5S5"/>
+                        <constraint firstItem="bJP-q7-X75" firstAttribute="top" secondItem="Jf7-sg-50o" secondAttribute="top" id="b30-03-Qf9"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Jf7-sg-50o" secondAttribute="bottom" constant="49" id="7Nj-6l-Zvx"/>
+                <constraint firstAttribute="trailing" secondItem="Jf7-sg-50o" secondAttribute="trailing" id="Ch2-Dq-0Wo"/>
+                <constraint firstItem="Jf7-sg-50o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gfy-QF-PuA"/>
+                <constraint firstItem="Jf7-sg-50o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y6g-dP-ATH"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="beijing-daoshuaaozhang.png" width="375" height="225"/>
+        <image name="buyProtection.png" width="268" height="47"/>
+        <image name="daoshaubaozhang-tubiao.png" width="112" height="113"/>
+    </resources>
+</document>

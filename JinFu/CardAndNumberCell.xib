@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="152" id="KGk-i7-Jjw" customClass="CardAndNumberCell">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="45" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_beijing.png" translatesAutoresizingMaskIntoConstraints="NO" id="vrx-rn-DXy">
+                        <rect key="frame" x="10" y="16" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="BCk-DK-YRs"/>
+                            <constraint firstAttribute="height" constant="20" id="ONW-5A-RLv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5566" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILL-6R-xaV">
+                        <rect key="frame" x="4" y="44" width="36" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="aZf-eT-hXh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ILL-6R-xaV" secondAttribute="trailing" constant="5" id="6hV-l7-pcZ"/>
+                    <constraint firstItem="ILL-6R-xaV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="Cuy-Oo-8pj"/>
+                    <constraint firstItem="vrx-rn-DXy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Gio-xq-dIo"/>
+                    <constraint firstItem="ILL-6R-xaV" firstAttribute="top" secondItem="vrx-rn-DXy" secondAttribute="bottom" constant="8" id="gRV-ca-ov2"/>
+                    <constraint firstItem="vrx-rn-DXy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-3" id="l5a-0h-ITP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="cardImageView" destination="vrx-rn-DXy" id="VHQ-3C-xx1"/>
+                <outlet property="cardNumber" destination="ILL-6R-xaV" id="qtI-B4-1uZ"/>
+            </connections>
+            <point key="canvasLocation" x="525.5" y="467"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_beijing.png" width="38" height="38"/>
+    </resources>
+</document>

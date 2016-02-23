@@ -39,6 +39,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+
 -(void)getAddedServiceNotification:(NSNotification*)notification{
     
     NSDictionary *resultDic = [[NSDictionary alloc] initWithDictionary:notification.userInfo];

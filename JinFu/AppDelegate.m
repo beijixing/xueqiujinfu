@@ -20,15 +20,19 @@
 #import <AlipaySDK/AlipaySDK.h>
 #import <Bugly/CrashReporter.h>
 #import <IQKeyboardManager.h>
-@interface AppDelegate ()
+#import "MBProgressHUD.h"
 
+@interface AppDelegate ()
+{
+    BOOL _autoLoginSuccess;
+    MBProgressHUD *_hud;
+}
 @end
 @implementation AppDelegate
 @synthesize window =_window;
 @synthesize isLogin;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     NSLog(@"mainscreenwidth = %f", MainScreenWidth);
     [DBManager createDataBase];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
@@ -37,11 +41,10 @@
     [WXApi registerApp:@"wxb4ba3c02aa476ea1" withDescription:@"demo 2.0"];
     [self registerBaiduPushNotification:application andlaunchOption:launchOptions];
     [self performSelector:@selector(initRootViewController) withObject:nil afterDelay:0.35f];
+ 
 //    [self testVC];
-    [NSThread sleepForTimeInterval:1.0];
     return YES;
 }
-
 
 - (void)testVC{
     ImportBillVC *billVc = [[ImportBillVC alloc] init];
@@ -62,7 +65,6 @@
         self.window.rootViewController=loginVc;
     }
     
-    
     //bug收集
     [[CrashReporter sharedInstance] installWithAppId:@"900017545"];
 }
@@ -74,14 +76,15 @@
     
     NSDictionary *responseObject = [resultDic objectForKey:@"responseObject"];
     if ([[responseObject objectForKey:@"login"]isEqualToString:@"1"]) {
-//        JFTabBarController *tabBarVc = [[JFTabBarController alloc] init];
-//        self.window.rootViewController = tabBarVc;
+        _autoLoginSuccess = true;
+        [_hud hide:YES];
         //保存登录状态
         [UserInfoModel sharedUserInfo].loginSuccess = @"true";
         if (![[UserInfoModel sharedUserInfo].chanelId isEqualToString:@""]) {
             [self sendPushChanelIdToServer];
         }
     }else {
+        [_hud hide:YES];
         [UserInfoModel sharedUserInfo].loginSuccess = @"false";
         [ToolBox showAlertInfo:@"登陆失败"];
     }
@@ -92,7 +95,12 @@
     UserInfoModel *userInfo = [[DBManager sharedDBManager] queryUserInfo];
     if ([refresh isEqualToString:@"0"]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginNotification:) name:Login object:nil];
+            _hud = [[MBProgressHUD alloc] initWithView:self.window];
+            _hud.removeFromSuperViewOnHide = YES;
+            [self.window addSubview:_hud];
+            [_hud show:YES];
     }
+    _autoLoginSuccess = false;
     NSString *parameter = [NSString stringWithFormat:@"%@email=%@&password=%@&refresh=1",Login, userInfo.email, userInfo.passWord];
     [[AFNetManager sharedManager] getDataFromServerWithHostUrl:HostUrl andParameters:parameter andNotificationName:Login];
 }
@@ -104,7 +112,6 @@
 
 
 - (void)registerBaiduPushNotification:(UIApplication *)application andlaunchOption:(NSDictionary *)launchOptions{
-    
     // iOS8 下需要使用新的 API
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
         UIUserNotificationType myTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
@@ -179,7 +186,7 @@
     // 应用在前台 或者后台开启状态下，不跳转页面，让用户选择。
     if (application.applicationState == UIApplicationStateActive || application.applicationState == UIApplicationStateBackground) {
         DLog(@"acitve or background");
-        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"雪球金服通知" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alertView show];
     }
     else//杀死状态下，直接跳转到跳转页面。

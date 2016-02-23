@@ -47,6 +47,7 @@
 #define Login @"member/login.do?" // 登陆接口
 #define Register @"member/register.do?" // 注册接口
 #define ImportProgress @"analyze/progress.do" // 抓取进度接口
+#define AnalyzeAnalyze @"analyze/analyze.do"//刷新账单
 #define ImportBills @"analyze/load.do" //导入账单信息
 #define FeedBack @"opinion/addOpinion.do"//意见反馈接口
 #define HomePageData @"analyze/index.do"//首页信用卡及服务列表
@@ -87,6 +88,11 @@
 #define UpdateChannelId @"member/updateChannelId.do?"//百度推送的ChanelID；
 #define PasswordCorrect @"member/is_password_correct.do"//检查邮箱密码是否正确
 
+#define GetMemberPaymentByMID @"payment/getMemberPaymentByMID.do"//获取当前用户所有赔付记录
+#define GetPaymentById @"payment/getPaymentById.do" //根据赔付id获取一条赔付记录
+#define LoginMemberUsername @"member/info.do"//获取用户名字
+#define WXpayperpay @"wxpay/wxpayperpay.do"//微信支付获取订单接口
+#define Alipayinfo @"alipay/ilipayinfo.do"//支付宝获取订单接口
 
 //#define SystemInfo @"SystemMessage.ashx" // 系统消息
 

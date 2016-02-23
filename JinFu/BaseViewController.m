@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica" size:14.0f], NSFontAttributeName,nil]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,[UIFont fontWithName:@"Helvetica" size:16.0f], NSFontAttributeName,nil]];
     
 //    self.view.backgroundColor = BACKGROUND_COLOR;
     //ios7.0适配
@@ -28,8 +28,6 @@
     }
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbarBg"] forBarMetrics:UIBarMetricsDefault];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = NO;
     self.contactWayTF.delegate = self;
     self.feedBackContent.delegate = self;
     self.navigationItem.title = @"意见反馈";
@@ -68,7 +69,6 @@
 }
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    textView.text = @"";
     return true;
 }
 

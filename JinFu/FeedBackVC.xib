@@ -8,8 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedBackVC">
             <connections>
-                <outlet property="contactWayTF" destination="4Pn-l7-glg" id="EyI-Cv-VDp"/>
-                <outlet property="feedBackContent" destination="Bld-mS-jL0" id="Thp-1S-mZu"/>
+                <outlet property="contactWayTF" destination="4Pn-l7-glg" id="aix-ig-XVx"/>
+                <outlet property="feedBackContent" destination="Bld-mS-jL0" id="geG-kd-QJE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
