@@ -24,7 +24,6 @@
     [self.payButtonView  addGestureRecognizer:tapGesture];
     bShowListView = false;
     self.payPartTF.delegate = self;
-    
 }
 
 - (void)hideGestureEvent {

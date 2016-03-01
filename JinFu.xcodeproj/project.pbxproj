@@ -68,6 +68,8 @@
 		866165BD1C2150AA00B89F8A /* tabBar3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866165B71C2150AA00B89F8A /* tabBar3@2x.png */; };
 		866165C51C215AC200B89F8A /* navbarBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866165C41C215AC200B89F8A /* navbarBg@2x.png */; };
 		866165C71C21651D00B89F8A /* partPayment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 866165C61C21651D00B89F8A /* partPayment@2x.png */; };
+		8665DB041C7C4B4000DB3241 /* MyCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8665DB031C7C4B4000DB3241 /* MyCardTableViewCell.m */; };
+		8665DB0A1C7E899200DB3241 /* MyProtectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8665DB091C7E899200DB3241 /* MyProtectionCell.m */; };
 		8685A15F1C22698A0054D215 /* UIView+MyLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685A15E1C22698A0054D215 /* UIView+MyLayerView.m */; };
 		8685A1611C2280740054D215 /* unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8685A1601C2280740054D215 /* unselect@2x.png */; };
 		8685A1681C228D930054D215 /* progressImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8685A1671C228D930054D215 /* progressImage@2x.png */; };
@@ -407,6 +409,10 @@
 		866165BF1C21531F00B89F8A /* PrefixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.h; sourceTree = "<group>"; };
 		866165C41C215AC200B89F8A /* navbarBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbarBg@2x.png"; sourceTree = "<group>"; };
 		866165C61C21651D00B89F8A /* partPayment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partPayment@2x.png"; sourceTree = "<group>"; };
+		8665DB021C7C4B4000DB3241 /* MyCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardTableViewCell.h; sourceTree = "<group>"; };
+		8665DB031C7C4B4000DB3241 /* MyCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardTableViewCell.m; sourceTree = "<group>"; };
+		8665DB081C7E899200DB3241 /* MyProtectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProtectionCell.h; sourceTree = "<group>"; };
+		8665DB091C7E899200DB3241 /* MyProtectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProtectionCell.m; sourceTree = "<group>"; };
 		8685A15D1C22698A0054D215 /* UIView+MyLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyLayerView.h"; sourceTree = "<group>"; };
 		8685A15E1C22698A0054D215 /* UIView+MyLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyLayerView.m"; sourceTree = "<group>"; };
 		8685A1601C2280740054D215 /* unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unselect@2x.png"; sourceTree = "<group>"; };
@@ -1182,6 +1188,8 @@
 				86D07F0A1C6099C4002FAB88 /* BankCardCell4PhoneThan6.h */,
 				86D07F0B1C6099C4002FAB88 /* BankCardCell4PhoneThan6.m */,
 				86D07F0C1C6099C4002FAB88 /* BankCardCell4PhoneThan6.xib */,
+				8665DB021C7C4B4000DB3241 /* MyCardTableViewCell.h */,
+				8665DB031C7C4B4000DB3241 /* MyCardTableViewCell.m */,
 				86AFEAB01C477CC10082BA25 /* BillDetail */,
 				86AFEAAF1C477C8C0082BA25 /* Message */,
 			);
@@ -1687,6 +1695,8 @@
 				86D07F761C60A051002FAB88 /* ProtectionCardCell4Phone6.h */,
 				86D07F771C60A051002FAB88 /* ProtectionCardCell4Phone6.m */,
 				86D07F781C60A051002FAB88 /* ProtectionCardCell4Phone6.xib */,
+				8665DB081C7E899200DB3241 /* MyProtectionCell.h */,
+				8665DB091C7E899200DB3241 /* MyProtectionCell.m */,
 				86D1CDCA1C7C0E7C0013F2EA /* CardAndNumberCell.h */,
 				86D1CDCB1C7C0E7C0013F2EA /* CardAndNumberCell.m */,
 				86D1CDCC1C7C0E7C0013F2EA /* CardAndNumberCell.xib */,
@@ -2105,6 +2115,7 @@
 				86E0EBD11C2244B100C50254 /* UIBlockButton.m in Sources */,
 				86D07F1E1C609A60002FAB88 /* DBManager.m in Sources */,
 				86D07F431C609D01002FAB88 /* MineTableCell.m in Sources */,
+				8665DB0A1C7E899200DB3241 /* MyProtectionCell.m in Sources */,
 				86D07F251C609A84002FAB88 /* AdDataModel.m in Sources */,
 				86D07F131C6099FB002FAB88 /* AFNetManager.m in Sources */,
 				86AFEB2C1C48E0B30082BA25 /* APAuthV2Info.m in Sources */,
@@ -2127,6 +2138,7 @@
 				86D07ED81C609849002FAB88 /* TableHeaderView.m in Sources */,
 				86D07F931C60A09E002FAB88 /* MySettingsViewController.m in Sources */,
 				86D07ECF1C609783002FAB88 /* RemindTimeCell.m in Sources */,
+				8665DB041C7C4B4000DB3241 /* MyCardTableViewCell.m in Sources */,
 				86D07E981C6094C5002FAB88 /* UserInfoCell.m in Sources */,
 				86D07F381C609B47002FAB88 /* UserInfoModel.m in Sources */,
 				8613B91D1C21290E0069D79F /* main.m in Sources */,

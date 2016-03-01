@@ -36,7 +36,7 @@
 
 #pragma mark --UILabel
 + (UILabel *)createLabelWithFrame:(CGRect)frame font:(UIFont *)textFont text:(NSString *)text {
-   return [[self class] createLabelWithFrame:frame textColor:[UIColor blackColor] backgroundColor:[UIColor whiteColor] textAlignment:NSTextAlignmentLeft font:textFont text:text];
+   return [[self class] createLabelWithFrame:frame textColor:[UIColor blackColor] backgroundColor:[UIColor clearColor] textAlignment:NSTextAlignmentLeft font:textFont text:text];
 }
 
 + (UILabel *)createLabelWithFrame:(CGRect)frame textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor textAlignment:(NSTextAlignment)textAlignment font:(UIFont *)textFont text:(NSString *)text {
