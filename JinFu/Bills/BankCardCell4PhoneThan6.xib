@@ -170,6 +170,16 @@
                             <action selector="billDetailButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VKG-X5-NkQ"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还款日11.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-fo-JIv">
+                        <rect key="frame" x="116" y="45" width="79" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="At5-fM-26O"/>
+                            <constraint firstAttribute="height" constant="16" id="ReU-Zu-OPV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国银行 0058" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKy-Qk-LBt">
                         <rect key="frame" x="78" y="23" width="117" height="21"/>
                         <constraints>
@@ -255,7 +265,7 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUE-cq-Hw6">
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUE-cq-Hw6">
                         <rect key="frame" x="236" y="47" width="113" height="108"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pullviewBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Krl-e8-dUi">
@@ -390,16 +400,6 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还款日11.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1F-fo-JIv">
-                        <rect key="frame" x="116" y="45" width="79" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="79" id="At5-fM-26O"/>
-                            <constraint firstAttribute="height" constant="16" id="ReU-Zu-OPV"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>

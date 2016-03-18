@@ -49,8 +49,8 @@
     [self.agreeAuthorizationImage addGestureRecognizer:agreeAuthorizationgesture];
     self.agreeAuthorizationImage.userInteractionEnabled = YES;
     
-    bRememberPswd = false;
-    bAgreeProto = false;
+    bRememberPswd = YES;
+    bAgreeProto = YES;
     failCount = 0;
 }
 

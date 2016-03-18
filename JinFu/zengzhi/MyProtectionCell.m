@@ -118,11 +118,11 @@
         self.buyServiceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [self.buyServiceButton setTitle:@"购买续保" forState:UIControlStateNormal];
         
-        [self.buyServiceButton addTarget:self action:@selector(operationButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.buyServiceButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [self.buyServiceButton setBackgroundColor:ColorWithRGB(255, 197, 30)];
+        [self.buyServiceButton addTarget:self action:@selector(buyServiceButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.buyServiceButton setTitleColor:ColorWithRGB(240, 240, 240) forState:UIControlStateNormal];
+        [self.buyServiceButton setBackgroundColor:ColorWithRGB(245, 170, 30)];
         self.buyServiceButton.layer.cornerRadius = 4.0f;
-        self.buyServiceButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
+        self.buyServiceButton.titleLabel.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:12.0];
         [self.contentView addSubview:self.buyServiceButton];
        
         //银行卡信息
@@ -164,7 +164,12 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.bankCardBg.frame = self.bounds;
+    [self.bankCardBg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.mas_left);
+        make.bottom.mas_equalTo(self.mas_bottom);
+        make.right.mas_equalTo(self.mas_right);
+        make.top.mas_equalTo(self.mas_top);
+    }];
     [self.icon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(30*_scale, 30*_scale));
         make.left.mas_equalTo(25*_scale);

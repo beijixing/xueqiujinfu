@@ -70,7 +70,7 @@
     [self.view addSubview:labelIntroduce];
     //创建返现说明内容label
     UILabel * labelContent = [[UILabel alloc]initWithFrame:CGRectMake(20*SCALE,265*SCALE_H,290*SCALE,60*SCALE_H)];
-    labelContent.text = @"被邀请注册成功的用户，成功购买金福服务中心业务（盗刷保障、丢卡保障、电话服务、POS机服务）将会按照X%，为您返现。";
+    labelContent.text = @"被邀请注册成功的用户，成功购买卡卡服务中心业务将会按照10%，为您返现。";
     labelContent.numberOfLines = 0;
     labelContent.textColor = [UIColor grayColor];
     labelContent.font = [UIFont systemFontOfSize:13];

@@ -24,6 +24,7 @@
 #import "DBManager.h"
 #import "AFNetworkReachabilityManager.h"
 #import "AFNetManager.h"
+#import "MyProtectionCell.h"
 @interface ValueAddedVC ()
 @end
 
@@ -141,57 +142,34 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (MainScreenWidth > 320) {
-        static NSString *cellName = @"ProtectionCardCell4Phone6";
-        ProtectionCardCell4Phone6 *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-        if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell4Phone6" owner:self options:nil] lastObject];
-        }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    }else {
-        static NSString *cellName = @"ProtectionCardCell";
-        ProtectionCardCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-        if (!cell) {
-            cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell" owner:self options:nil] lastObject];
-        }
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
+    static NSString *cellName = @"ProtectionCardCell";
+    MyProtectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    if (!cell) {
+        cell = [[MyProtectionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
     }
-
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    BankCardListDataModel *serviceModel = _serviceList[indexPath.row];
-    if (MainScreenWidth > 320) {
-        ProtectionCardCell4Phone6 *showCell = (ProtectionCardCell4Phone6*)cell;
-        [self setProtectionCardCellInfo4Phone6:showCell data:serviceModel];
-        [self setServiceIcon4Phone6:showCell serviceModel:serviceModel];
-        [self setOperationButtonState4Phone6:showCell serviceModel:serviceModel];
-    }else {
-        ProtectionCardCell *showCell = (ProtectionCardCell *)cell;
+        BankCardListDataModel *serviceModel = _serviceList[indexPath.row];
+        MyProtectionCell *showCell = (MyProtectionCell *)cell;
         [self setProtectionCardCellInfo:showCell data:serviceModel];
         [self setServiceIcon:showCell serviceModel:serviceModel];
         [self setOperationButtonState:showCell serviceModel:serviceModel];
-    }
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (MainScreenWidth > 320) {
-        return 214;
-    }else{
-        return 183;
-    }
+    return 183*(MainScreenWidth/320);
 }
 
-- (void)setProtectionCardCellInfo:(ProtectionCardCell*)showCell data:(BankCardListDataModel *)serviceModel {
+- (void)setProtectionCardCellInfo:(MyProtectionCell*)showCell data:(BankCardListDataModel *)serviceModel {
     [showCell setCardsInfo:serviceModel.serviceCardList];
     showCell.servicePeriod.text = [NSString stringWithFormat:@"%@",serviceModel.period];
     showCell.title.text = [NSString stringWithFormat:@"%@",serviceModel.bankName];
     showCell.servicePeriod.text =  [NSString stringWithFormat:@"%@", serviceModel.serviceCycle];
-    if ([serviceModel.serviceType isEqualToString:@"4"]) {
+    if ([serviceModel.serviceType intValue] == 4) {
         [showCell setPosItemShowState:YES];
         
     }else {
@@ -225,13 +203,15 @@
 
 }
 
-- (void)setOperationButtonState:(ProtectionCardCell *)showCell serviceModel:(BankCardListDataModel *)serviceModel  {
+- (void)setOperationButtonState:(MyProtectionCell *)showCell serviceModel:(BankCardListDataModel *)serviceModel  {
     if ([serviceModel.serviceStatus intValue] == 0) {
         [showCell.operationButton setTitle:@"待审核" forState:UIControlStateNormal];
         [showCell.operationButton setBackgroundImage:[UIImage imageNamed:@"payStateBg2@2x.png"] forState:UIControlStateNormal];
         [showCell.operationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [showCell.buyServiceButton setBackgroundColor:[UIColor colorWithRed:0.91f green:0.91f blue:0.91f alpha:1.00f]];
         showCell.buyServiceButton.enabled = NO;
+        showCell.operationButton.hidden = NO;
+        showCell.lineImage.hidden = NO;
+        [showCell.buyServiceButton setBackgroundColor:ColorWithRGB(160, 160, 160)];
     }else if ([serviceModel.serviceStatus integerValue] ==1) {
         [showCell.operationButton setTitle:@"申请赔付" forState:UIControlStateNormal];
         [showCell.operationButton setBackgroundImage:[UIImage imageNamed:@"payStateBg1@2x.png"] forState:UIControlStateNormal];
@@ -244,28 +224,35 @@
                 [self.navigationController pushViewController:slVC animated:YES];
             }
         };
+        
+        [showCell.buyServiceButton setBackgroundColor:ColorWithRGB(245, 170, 30)];
+        showCell.buyServiceButton.enabled = YES;
+        
         //电话服务
         if ([serviceModel.serviceType intValue] == 3 || [serviceModel.serviceType intValue] == 4) {
             showCell.operationButton.hidden = YES;
-            showCell.imageViewLine.hidden = YES;
+            showCell.lineImage.hidden = YES;
             
             //pos服务不能续买
             if ([serviceModel.serviceType intValue] == 4) {
-                [showCell.buyServiceButton setBackgroundColor:[UIColor colorWithRed:0.91f green:0.91f blue:0.91f alpha:1.00f]];
+                [showCell.buyServiceButton setBackgroundColor:ColorWithRGB(160, 160, 160)];
                 showCell.buyServiceButton.enabled = NO;
             }
         }
     }else if ([serviceModel.serviceStatus integerValue] == 2) {
         [showCell.operationButton setTitle:@"未通过" forState:UIControlStateNormal];
         [showCell.operationButton setBackgroundImage:[UIImage imageNamed:@"payStateBg0@2x.png"] forState:UIControlStateNormal];
-        [showCell.buyServiceButton setBackgroundColor:[UIColor colorWithRed:0.91f green:0.91f blue:0.91f alpha:1.00f]];
+        [showCell.buyServiceButton setBackgroundColor:ColorWithRGB(160, 160, 160)];
         showCell.buyServiceButton.enabled = NO;
+        
+        showCell.operationButton.hidden = NO;
+        showCell.lineImage.hidden = NO;
     }
     
 }
 
 
-- (void)setServiceIcon:(ProtectionCardCell *)showCell serviceModel:(BankCardListDataModel *)serviceModel {
+- (void)setServiceIcon:(MyProtectionCell *)showCell serviceModel:(BankCardListDataModel *)serviceModel {
     if ([serviceModel.serviceType integerValue]== 1) {
         [showCell.icon setImage:ImageName(@"diu-ka-bao-zhang@2x.png")];
         
@@ -412,7 +399,7 @@
 
 //审核未通过
 - (void)reeditCommitInfomation:(BankCardListDataModel *)serviceModel {
-    if ([serviceModel.paidState isEqualToString:@"1"]) {
+    if ([serviceModel.paidState integerValue] == 1) {
         [ToolBox showAlertInfo:@"服务已退款，请重新购买"];
         return;
     }

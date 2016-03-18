@@ -79,9 +79,10 @@
     //选中状态 button
     UIButton * iconBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     iconBtn.frame = CGRectMake(50* SCALE, 270, 20* SCALE, 20);
-    [iconBtn setImage:[UIImage imageNamed:@"unselect@2x.png"] forState:UIControlStateNormal];
-     [iconBtn setImage:[UIImage imageNamed:@"fuwutiaokuan-tongyi@2x.png"] forState:UIControlStateSelected];
+    [iconBtn setImage:[UIImage imageNamed:@"unselect"] forState:UIControlStateNormal];
+    [iconBtn setImage:[UIImage imageNamed:@"selected"] forState:UIControlStateSelected];
     [iconBtn addTarget:self action:@selector(btnTap:) forControlEvents:UIControlEventTouchUpInside];
+    iconBtn.selected = YES;
     iconBtn.tag = 38;
     [self.view addSubview:iconBtn];
     //创建label

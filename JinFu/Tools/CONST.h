@@ -40,9 +40,10 @@
 #define ShareApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 // 接口
-#define HostUrl @"http://192.168.1.39:8080/finaServ/"  // 测试库
+//#define HostUrl @"http://192.168.1.39:8080/finaServ/"  // 测试库
 //#define HostUrl @"http://hao-lib.gongyeyun.com/"// 正式库
 //#define HostUrl @"http://192.168.1.81:8080/finaServ/"//吴文进
+#define HostUrl @"http://121.42.183.148:80/finaServ/"//吴文进
 
 #define Login @"member/login.do?" // 登陆接口
 #define Register @"member/register.do?" // 注册接口

@@ -63,170 +63,180 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){
-        self.bankCardBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bankCardBg1"]];
-        [self.contentView addSubview:self.bankCardBg];
-        
-        self.cardIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank3"]];
-        [self.contentView addSubview:self.cardIcon];
-        
-        self.cardNameAndNumber = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:14] text:@""];
-        [self.contentView addSubview:self.cardNameAndNumber];
-        
-        self.cnyImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CNY"]];
-        [self.contentView addSubview:self.cnyImage];
-        
-        self.deadDate = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
-        self.deadDate.textColor = TipTextColor;
-        [self.contentView addSubview:self.deadDate];
-    
-        self.lineImage = [[UIImageView alloc] init];
-        self.lineImage.backgroundColor = ColorWithRGB(220, 220, 220);
-        [self.contentView addSubview:self.lineImage];
-        
-        self.cdTime = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial Rounded MT Bold" size:25] text:@"55"];
-        self.cdTime.textColor = [UIColor redColor];
-        self.cdTime.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.cdTime];
-        
-        self.cdTimeTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"天后"];
-        self.cdTimeTip.textColor = TipTextColor;
-        self.cdTimeTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.cdTimeTip];
-		
-        self.debt = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
-        self.debt.textColor = [UIColor redColor];
-        self.debt.textAlignment = NSTextAlignmentRight;
-        [self.contentView addSubview:self.debt];
-        self.debtTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"应还"];
-        self.debtTip.textColor = TipTextColor;
-        self.debtTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.debtTip];
-		
-        self.minPay = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
-        self.minPay.textColor = TipTextColor;
-        self.minPay.textAlignment = NSTextAlignmentRight;
-        [self.contentView addSubview:self.minPay];
-        self.minPayTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"最低"];
-        self.minPayTip.textColor = TipTextColor;
-        self.minPayTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.minPayTip];
-		
-        self.creditLine = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"50000"];
-        self.creditLine.textAlignment = NSTextAlignmentRight;
-        self.creditLine.textColor = TipTextColor;
-        [self.contentView addSubview:self.creditLine];
-        self.creditLineTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"额度"];
-        self.creditLineTip.textColor = TipTextColor;
-        self.creditLineTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.creditLineTip];
-		
-        self.integeral = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
-        self.integeral.textColor = TipTextColor;
-        self.integeral.textAlignment = NSTextAlignmentRight;
-        [self.contentView addSubview:self.integeral];
-        self.integeralTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"积分"];
-        self.integeralTip.textColor = TipTextColor;
-        self.integeralTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.integeralTip];
-		
-        self.period = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
-        self.period.textColor = TipTextColor;
-        [self.contentView addSubview:self.period];
-        self.periodTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"账单期："];
-        self.periodTip.textColor = TipTextColor;
-        self.periodTip.textAlignment = NSTextAlignmentCenter;
-        [self.contentView addSubview:self.periodTip];
-		
-        self.leftDaysToNextBillDay = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"15"];
-        self.leftDaysToNextBillDay.textAlignment = NSTextAlignmentCenter;
-        self.leftDaysToNextBillDay.textColor = [UIColor orangeColor];
-        self.leftDaysToNextBillDay.backgroundColor = ColorWithRGB(230, 230, 230);
-        [self.contentView addSubview:self.leftDaysToNextBillDay];
-        
-        self.rightOperation = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrowWithCircle"]];
-        [self.contentView addSubview:self.rightOperation];
-        
-        
-        self.payStateBgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payStateBg0"]];
-        [self.contentView addSubview:self.payStateBgImageView];
-        self.payStateLabel = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:14] text:@"未还款"];
-        self.payStateLabel.textColor = [UIColor whiteColor];
-        self.payStateLabel.textAlignment = NSTextAlignmentCenter;
-        [self.payStateBgImageView addSubview:self.payStateLabel];
-        
-        self.indicator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-bai"]];
-        [self.payStateBgImageView addSubview:self.indicator];
-        
-        _scale = [UIScreen mainScreen].bounds.size.width/320;
-        [self layoutSubviews];
-        
-        
-        //下拉菜单
-        self.pullView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pullviewBg"]];
-        self.pullView.userInteractionEnabled = YES;
-        [self.contentView addSubview:self.pullView];
-        
-        self.redDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState0"]];
-        [self.pullView addSubview:self.redDotImage];
-        
-        self.greenDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState1"]];
-        [self.pullView addSubview:self.greenDotImage];
-        
-        self.orangeDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState2"]];
-        [self.pullView addSubview:self.orangeDotImage];
-    
-        self.moneyFlagImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"￥"]];
-        [self.pullView addSubview:self.moneyFlagImage];
-        
-        self.upaidButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [self.upaidButton setTitle:@"未还款" forState:UIControlStateNormal];
-        [self.upaidButton addTarget:self action:@selector(unpayButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.upaidButton setTintColor:TipTextColor];
-        self.upaidButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
-
-        [self.pullView addSubview:self.upaidButton];
-        
-        self.lineImage1 = [[UIImageView alloc] init];
-        self.lineImage1.backgroundColor = ColorWithRGB(240, 240, 240);
-        [self.pullView addSubview:self.lineImage1];
-        
-        self.lineImage2 = [[UIImageView alloc] init];
-        self.lineImage2.backgroundColor = ColorWithRGB(240, 240, 240);
-        [self.pullView addSubview:self.lineImage2];
-        
-        self.paidButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [self.paidButton setTitle:@"已还款" forState:UIControlStateNormal];
-        [self.paidButton addTarget:self action:@selector(paidButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.paidButton setTintColor:TipTextColor];
-        self.paidButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
-        [self.pullView addSubview:self.paidButton];
-        
-        self.payPartButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [self.payPartButton setTitle:@"部分还款" forState:UIControlStateNormal];
-        [self.payPartButton addTarget:self action:@selector(payPartButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [self.payPartButton setTintColor:TipTextColor];
-        self.payPartButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
-        [self.pullView addSubview:self.payPartButton];
-        
-        self.payPartTF = [[UITextField alloc] init];
-        self.payPartTF.delegate = self;
-        self.payPartTF.borderStyle = UITextBorderStyleNone;
-        self.payPartTF.font = [UIFont fontWithName:@"Arial" size:12.0];
-        self.payPartTF.backgroundColor = ColorWithRGB(250, 250, 250);
-        self.payPartTF.layer.cornerRadius = 4;
-        self.payPartTF.layer.borderColor = ColorWithRGB(220, 220, 220).CGColor;
-        self.payPartTF.layer.borderWidth = 1.0;
-        [self.pullView addSubview:self.payPartTF];
-        self.pullView.hidden = YES;
-        
-        //UITapGestureRecognizer
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureEvent)];
-        [self.payStateBgImageView  addGestureRecognizer:tapGesture];
-        self.payStateBgImageView.userInteractionEnabled = YES;
-        bShowListView = false;
-
+        [self createUI];
     }
     return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self createUI];
+    }
+    return self;
+}
+
+- (void)createUI {
+    self.bankCardBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bankCardBg1"]];
+    [self.contentView addSubview:self.bankCardBg];
+    
+    self.cardIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bank3"]];
+    [self.contentView addSubview:self.cardIcon];
+    
+    self.cardNameAndNumber = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:14] text:@""];
+    [self.contentView addSubview:self.cardNameAndNumber];
+    
+    self.cnyImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CNY"]];
+    [self.contentView addSubview:self.cnyImage];
+    
+    self.deadDate = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
+    self.deadDate.textColor = TipTextColor;
+    [self.contentView addSubview:self.deadDate];
+    
+    self.lineImage = [[UIImageView alloc] init];
+    self.lineImage.backgroundColor = ColorWithRGB(220, 220, 220);
+    [self.contentView addSubview:self.lineImage];
+    
+    self.cdTime = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial Rounded MT Bold" size:25] text:@"55"];
+    self.cdTime.textColor = [UIColor redColor];
+    self.cdTime.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.cdTime];
+    
+    self.cdTimeTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"天内"];
+    self.cdTimeTip.textColor = TipTextColor;
+    self.cdTimeTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.cdTimeTip];
+    
+    self.debt = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
+    self.debt.textColor = [UIColor redColor];
+    self.debt.textAlignment = NSTextAlignmentRight;
+    [self.contentView addSubview:self.debt];
+    self.debtTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"应还"];
+    self.debtTip.textColor = TipTextColor;
+    self.debtTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.debtTip];
+    
+    self.minPay = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
+    self.minPay.textColor = TipTextColor;
+    self.minPay.textAlignment = NSTextAlignmentRight;
+    [self.contentView addSubview:self.minPay];
+    self.minPayTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"最低"];
+    self.minPayTip.textColor = TipTextColor;
+    self.minPayTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.minPayTip];
+    
+    self.creditLine = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"50000"];
+    self.creditLine.textAlignment = NSTextAlignmentRight;
+    self.creditLine.textColor = TipTextColor;
+    [self.contentView addSubview:self.creditLine];
+    self.creditLineTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"额度"];
+    self.creditLineTip.textColor = TipTextColor;
+    self.creditLineTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.creditLineTip];
+    
+    self.integeral = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
+    self.integeral.textColor = TipTextColor;
+    self.integeral.textAlignment = NSTextAlignmentRight;
+    [self.contentView addSubview:self.integeral];
+    self.integeralTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"积分"];
+    self.integeralTip.textColor = TipTextColor;
+    self.integeralTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.integeralTip];
+    
+    self.period = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@""];
+    self.period.textColor = TipTextColor;
+    [self.contentView addSubview:self.period];
+    self.periodTip = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"账单期："];
+    self.periodTip.textColor = TipTextColor;
+    self.periodTip.textAlignment = NSTextAlignmentCenter;
+    [self.contentView addSubview:self.periodTip];
+    
+    self.leftDaysToNextBillDay = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:TipTextFontSize] text:@"15"];
+    self.leftDaysToNextBillDay.textAlignment = NSTextAlignmentCenter;
+    self.leftDaysToNextBillDay.textColor = [UIColor orangeColor];
+    self.leftDaysToNextBillDay.backgroundColor = ColorWithRGB(230, 230, 230);
+    [self.contentView addSubview:self.leftDaysToNextBillDay];
+    
+    self.rightOperation = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrowWithCircle"]];
+    [self.contentView addSubview:self.rightOperation];
+    
+    
+    self.payStateBgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payStateBg0"]];
+    [self.contentView addSubview:self.payStateBgImageView];
+    self.payStateLabel = [ToolBox createLabelWithFrame:CGRectZero font:[UIFont fontWithName:@"Arial" size:14] text:@"未还款"];
+    self.payStateLabel.textColor = [UIColor whiteColor];
+    self.payStateLabel.textAlignment = NSTextAlignmentCenter;
+    [self.payStateBgImageView addSubview:self.payStateLabel];
+    
+    self.indicator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow-bai"]];
+    [self.payStateBgImageView addSubview:self.indicator];
+    
+    _scale = [UIScreen mainScreen].bounds.size.width/320;
+//    [self layoutSubviews];
+    
+    
+    //下拉菜单
+    self.pullView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pullviewBg"]];
+    self.pullView.userInteractionEnabled = YES;
+    [self.contentView addSubview:self.pullView];
+    
+    self.redDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState0"]];
+    [self.pullView addSubview:self.redDotImage];
+    
+    self.greenDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState1"]];
+    [self.pullView addSubview:self.greenDotImage];
+    
+    self.orangeDotImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"payState2"]];
+    [self.pullView addSubview:self.orangeDotImage];
+    
+    self.moneyFlagImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"￥"]];
+    [self.pullView addSubview:self.moneyFlagImage];
+    
+    self.upaidButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.upaidButton setTitle:@"未还款" forState:UIControlStateNormal];
+    [self.upaidButton addTarget:self action:@selector(unpayButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.upaidButton setTintColor:TipTextColor];
+    self.upaidButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
+    
+    [self.pullView addSubview:self.upaidButton];
+    
+    self.lineImage1 = [[UIImageView alloc] init];
+    self.lineImage1.backgroundColor = ColorWithRGB(240, 240, 240);
+    [self.pullView addSubview:self.lineImage1];
+    
+    self.lineImage2 = [[UIImageView alloc] init];
+    self.lineImage2.backgroundColor = ColorWithRGB(240, 240, 240);
+    [self.pullView addSubview:self.lineImage2];
+    
+    self.paidButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.paidButton setTitle:@"已还款" forState:UIControlStateNormal];
+    [self.paidButton addTarget:self action:@selector(paidButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.paidButton setTintColor:TipTextColor];
+    self.paidButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
+    [self.pullView addSubview:self.paidButton];
+    
+    self.payPartButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [self.payPartButton setTitle:@"部分还款" forState:UIControlStateNormal];
+    [self.payPartButton addTarget:self action:@selector(payPartButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.payPartButton setTintColor:TipTextColor];
+    self.payPartButton.titleLabel.font = [UIFont fontWithName:@"Arial" size:12.0];
+    [self.pullView addSubview:self.payPartButton];
+    
+    self.payPartTF = [[UITextField alloc] init];
+    self.payPartTF.delegate = self;
+    self.payPartTF.borderStyle = UITextBorderStyleNone;
+    self.payPartTF.font = [UIFont fontWithName:@"Arial" size:12.0];
+    self.payPartTF.backgroundColor = ColorWithRGB(250, 250, 250);
+    self.payPartTF.layer.cornerRadius = 4;
+    self.payPartTF.layer.borderColor = ColorWithRGB(220, 220, 220).CGColor;
+    self.payPartTF.layer.borderWidth = 1.0;
+    [self.pullView addSubview:self.payPartTF];
+    self.pullView.hidden = YES;
+    
+    //UITapGestureRecognizer
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureEvent)];
+    [self.payStateBgImageView  addGestureRecognizer:tapGesture];
+    self.payStateBgImageView.userInteractionEnabled = YES;
+    bShowListView = false;
 }
 
 
@@ -304,8 +314,12 @@
 }
 
 - (void)layoutSubviews {
-    [super layoutSubviews];
-    self.bankCardBg.frame = self.contentView.bounds;
+    [self.bankCardBg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.mas_left);
+        make.bottom.mas_equalTo(self.mas_bottom);
+        make.right.mas_equalTo(self.mas_right);
+        make.top.mas_equalTo(self.mas_top);
+    }];
     [self.cardIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(30*_scale, 30*_scale));
         make.left.mas_equalTo(20*_scale);

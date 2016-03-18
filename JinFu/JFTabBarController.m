@@ -26,7 +26,7 @@
     
     
     UINavigationController *finNav = [[UINavigationController alloc] initWithRootViewController:[[FinancialVC alloc] init]];
-    finNav.tabBarItem.title = @"金服";
+    finNav.tabBarItem.title = @"卡卡";
     finNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabBar2_active"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     finNav.tabBarItem.image = [[UIImage imageNamed:@"tabBar2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     

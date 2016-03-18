@@ -19,6 +19,16 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"关于我们";
     [self configNavigationLeftButton];
+    
+    UITapGestureRecognizer *tapGesture =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openURL:)];
+    [self.linkLabel addGestureRecognizer:tapGesture];
+    self.linkLabel.userInteractionEnabled = YES;
+}
+
+- (void)openURL:(UIGestureRecognizer *)gesture {
+    NSString *url = @"http://www.xueqiujinfu.com/";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
 - (void)configNavigationLeftButton {

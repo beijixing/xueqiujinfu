@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"金服";
+    self.navigationItem.title = @"卡卡";
  
     
 //    if ([AFNetworkReachabilityManager sharedManager].isReachable == 0) {//没有网络
@@ -36,8 +36,15 @@
 //        NSString *fullUrlStr = [NSString stringWithFormat:@"%@%@", HostUrl, GetAddedServiceList];
 //        [[AFNetManager sharedManager] postDataToServerWithHostUrl:fullUrlStr andParameters:nil andNotificationName:GetAddedServiceList];
 //    }
-    
+    [self configStatusBar];
 }
+
+- (void)configStatusBar {
+    UIView *statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 20)];
+    statusBar.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:statusBar];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBarHidden = YES;

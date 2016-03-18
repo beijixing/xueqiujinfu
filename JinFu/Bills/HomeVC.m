@@ -8,7 +8,7 @@
 
 #import "HomeVC.h"
 #import "LoginVC.h"
-#import "BankCardCell.h"
+//#import "BankCardCell.h"
 #import "Masonry.h"
 #import "AFNetManager.h"
 #import "ProtectionCardCell.h"
@@ -22,7 +22,7 @@
 #import "ServiceCardListDataModel.h"
 #import "DBManager.h"
 #import "AdDataModel.h"
-#import "BankCardCell4PhoneThan6.h"
+//#import "BankCardCell4PhoneThan6.h"
 
 //增值服务
 #import "PhoneServiceVC.h"
@@ -35,10 +35,9 @@
 #import "AddPhoneServiceInfoVC.h"
 #import "AddLostCardProtectionInfoVC.h"
 #import "MJRefresh.h"
-
 #import "MyCardTableViewCell.h"
 #import "MyProtectionCell.h"
-
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface HomeVC ()<CirculateViewDelegate>
 {
@@ -50,6 +49,7 @@
     MBProgressHUD *_hud;
     BOOL bShowScrollView;
     CirculateView *_tableHeader;
+    NSString *_changedPayState;
 }
 @end
 
@@ -58,7 +58,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"首 页";
-    
     [self initScrollView];
     UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureAction:)];
     [self.bankTable addGestureRecognizer:pinchGesture];
@@ -86,6 +85,14 @@
         [self getAddedServiceList];
         [self checkPasswordCorrect];
     }
+    
+    [self configStatusBar];
+}
+
+- (void)configStatusBar {
+    UIView *statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 20)];
+    statusBar.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:statusBar];
 }
 
 - (void)pullDownUpdateData {
@@ -132,8 +139,12 @@
     NSDictionary *responseObj = [resultDic objectForKey:@"responseObject"];
     
     NSInteger flag = [[responseObj objectForKey:@"flag"] integerValue];
-    if (flag == 1) {//有新账单
+    if (flag == 1) {//有新账单，添加提示音
         [self sendHomePageDataRequst:NO];
+        SystemSoundID myAlertSound;
+        NSURL *url = [NSURL URLWithString:@"/System/Library/Audio/UISounds/new-mail.caf"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)(url), &myAlertSound);
+        AudioServicesPlaySystemSound(myAlertSound);
     }
     [self.bankTable.mj_header endRefreshing];
 }
@@ -307,47 +318,24 @@
 }
 
 - (void)updateBankScrollViewData {
-    CGFloat scrollItemHeight = 183;
-    if (MainScreenWidth > 320) {
-        scrollItemHeight = 214;
-    }
-    
+    CGFloat scrollItemHeight = 183 * (MainScreenWidth/320);
     CGFloat contentSizeHeight = ([_cardInfoArr count] - 1)*60 + scrollItemHeight;
     _bankScrollView.contentSize = CGSizeMake(self.bankTable.frame.size.width, contentSizeHeight);
     for (int i = 0; i<[_cardInfoArr count]; i++) {
         BankCardListDataModel *cardModel = [_cardInfoArr objectAtIndex:i];
         if ([cardModel.dataType isEqualToString:@"1"]) {
-            if(MainScreenWidth >320)
-            {
-                BankCardCell4PhoneThan6 *cell = [[[NSBundle mainBundle] loadNibNamed:@"BankCardCell4PhoneThan6" owner:self options:nil] lastObject];
-                [_bankScrollView addSubview:cell];
-                cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, cell.frame.size.height);
-                [_scrollViewItemArr addObject:cell];
-                [self setBankCardCell4PhoneThan6Data:cell data:cardModel scrollViewCell:YES];
-            }else {
-                BankCardCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"BankCardCell" owner:self options:nil] lastObject];
-                [_bankScrollView addSubview:cell];
-                cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, cell.frame.size.height);
-                [_scrollViewItemArr addObject:cell];
-                [self setBankCardCellData:cell data:cardModel scrollViewCell:YES];
-            }
-            
+            MyCardTableViewCell *cell = [[MyCardTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCardTableViewCell"];
+            [_bankScrollView addSubview:cell];
+            cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, scrollItemHeight);
+//            [_scrollViewItemArr addObject:cell];
+            [self setBankCardCellData:cell data:cardModel scrollViewCell:YES];
         }else {
             DLog(@"ProtectionCardCell");
-            if (MainScreenWidth >320) {
-                ProtectionCardCell4Phone6 *cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell4Phone6" owner:self options:nil] lastObject];
+           
+                MyProtectionCell *cell = [[MyProtectionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ProtectionCardCell"];
                 [_bankScrollView addSubview:cell];
-                //CGFloat posx = (MainScreenWidth - cell.frame.size.width - 16)/2;
-                cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, cell.frame.size.height);
-                [self setProtectionCardCell4Phone6Data:cell data:cardModel scrollViewCell:YES];
-            }else {
-                ProtectionCardCell *cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell" owner:self options:nil] lastObject];
-                [_bankScrollView addSubview:cell];
-                //CGFloat posx = (MainScreenWidth - cell.frame.size.width - 16)/2;
-                cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, cell.frame.size.height);
+                cell.frame = CGRectMake(0, 60 * i, self.bankTable.frame.size.width, scrollItemHeight);
                 [self setProtectionCardCellData:cell data:cardModel scrollViewCell:YES];
-            }
-            
         }
     }
 }
@@ -422,7 +410,7 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 183*(MainScreenWidth/320);
+    return 183 * (MainScreenWidth/320);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -460,60 +448,37 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BankCardListDataModel *cardModel = [_cardInfoArr objectAtIndex:indexPath.row];
-//    if ([cardModel.dataType isEqualToString:@"1"]) {
-//        static NSString *cellName = @"ProtectionCardCell";
-//        MyCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-//        if (!cell) {
-//            cell = [[MyCardTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
-//        }
-//        return cell;
-//    }else {
-//        DLog(@"ProtectionCardCell");
-//        if (MainScreenWidth > 320) {
-//            static NSString *cellName = @"ProtectionCardCell4Phone6";
-//            ProtectionCardCell4Phone6 *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-//            if (!cell) {
-//                cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell4Phone6" owner:self options:nil] lastObject];
-//            }
-//            return cell;
-//        }else {
-//            static NSString *cellName = @"ProtectionCardCell";
-//            ProtectionCardCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-//            if (!cell) {
-//                cell = [[[NSBundle mainBundle] loadNibNamed:@"ProtectionCardCell" owner:self options:nil] lastObject];
-//            }
-//            return cell;
-//        }
-//    }
-
-    static NSString *cellName = @"ProtectionCardCell";
-    BankCardCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-    if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"BankCardCell" owner:self options:nil] lastObject];
+    if ([cardModel.dataType isEqualToString:@"1"]) {
+        static NSString *cellName = @"MyCardTableViewCell";
+        MyCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+        if (!cell) {
+            cell = [[MyCardTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+        }
+        return cell;
+    }else {
+        DLog(@"ProtectionCardCell");
+        static NSString *cellName = @"MyCardTableViewCell";
+        MyProtectionCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+        if (!cell) {
+            cell = [[MyProtectionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+        }
+        return cell;
     }
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    return;
     BankCardListDataModel *cardModel = [_cardInfoArr objectAtIndex:indexPath.row];
     if ([cardModel.dataType isEqualToString:@"1"]) {
         MyCardTableViewCell *bankCardcell = (MyCardTableViewCell *)cell;
         [self setBankCardCellData:bankCardcell data:cardModel scrollViewCell:NO];
     }else {
-        if (MainScreenWidth > 320) {
-            ProtectionCardCell4Phone6 *protectionCardCell = (ProtectionCardCell4Phone6*)cell;
-            [self setProtectionCardCell4Phone6Data:protectionCardCell data:cardModel scrollViewCell:NO];
-        }else {
-            ProtectionCardCell *protectionCardCell = (ProtectionCardCell*)cell;
-            [self setProtectionCardCellData:protectionCardCell data:cardModel scrollViewCell:NO];
-        }
+        MyProtectionCell *protectionCardCell = (MyProtectionCell*)cell;
+        [self setProtectionCardCellData:protectionCardCell data:cardModel scrollViewCell:NO];
     }
 }
 
 - (void)setBankCardCellData:(MyCardTableViewCell *)cell data:(BankCardListDataModel *)dataModel scrollViewCell:(BOOL)bScroll{
     cell.cardNameAndNumber.text = [NSString stringWithFormat:@"%@ %@", dataModel.bankName, dataModel.cardLastNum];
-    
     cell.debt.text = [NSString stringWithFormat:@"%@", dataModel.debt];
     cell.minPay.text = [NSString stringWithFormat:@"%@", dataModel.minPay];
     cell.creditLine.text = [NSString stringWithFormat:@"%@", dataModel.creditLine];
@@ -532,21 +497,9 @@
     NSString *iconPath = [[BankCardIconManager sharedManager] getBankIconPathWithName: dataModel.bankName];
     DLog(@"iconPath = %@", iconPath);
     cell.cardIcon.image = ImageName(iconPath);
-    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     [cell setPayState:dataModel.payStatus andPaidNum:dataModel.partPayNum];
-//    cell.billDetailButtonAction = ^(UIButton *button){
-//        if (bScroll) {
-//            return ;
-//        }
-        DLog(@"billDetailButtonAction");
-//        BillDetailVC *billDetailVc = [[BillDetailVC alloc] init];
-//        billDetailVc.bankCardId = [NSString stringWithFormat:@"%@", dataModel.cardId];
-//        billDetailVc.bankCardInfo = dataModel;
-//        [self.navigationController pushViewController:billDetailVc animated:YES];
-//    };
-    
     cell.getPayState = ^(NSInteger paystate, CGFloat partPayNUmber){
         [self setPayState:[NSString stringWithFormat:@"%ld", paystate] andPaidMoney:[NSString stringWithFormat:@"%0.2f", partPayNUmber] andBIllId:dataModel.billId];
         dataModel.partPayNum = [NSString stringWithFormat:@"%0.2f", partPayNUmber];
@@ -562,57 +515,8 @@
     [self setNextBilldateCDDays:cell data:dataModel];
 }
 
-- (void)setBankCardCell4PhoneThan6Data:(BankCardCell4PhoneThan6 *)cell data:(BankCardListDataModel *)dataModel scrollViewCell:(BOOL)bScroll{
-    cell.cardNameAndNumber.text = [NSString stringWithFormat:@"%@ %@", dataModel.bankName, dataModel.cardLastNum];
-    cell.debt.text = [NSString stringWithFormat:@"%@", dataModel.debt];
-    cell.minPay.text = [NSString stringWithFormat:@"%@", dataModel.minPay];
-    cell.creditLine.text = [NSString stringWithFormat:@"%@", dataModel.creditLine];
-    cell.integeral.text = [NSString stringWithFormat:@"%@", dataModel.integral];
-    cell.period.text = [NSString stringWithFormat:@"%@", dataModel.period];
-    
-    NSMutableString *deadLine = [NSMutableString stringWithString: dataModel.deadLine];
-    [deadLine replaceOccurrencesOfString:@"-" withString:@"." options:NSWidthInsensitiveSearch range:NSMakeRange(0,10)];
-    DLog(@"deadLine = %@",deadLine);
-    cell.deadDate.text = [NSString stringWithFormat:@"还款日%@", [deadLine substringWithRange:NSMakeRange(5, 6)]];
-    
-    NSString *dateNowStr = [ToolBox getDateStringWithDate:[[NSDate date] description] dateFormat:@"yyyy-MM-dd HH:mm:ss z" destFormat:@"yyyy.MM.dd HH:mm:ss"];
-    NSString *cdTimeStr = [ToolBox getDaysBetweenEndDate:[NSMutableString stringWithString: dataModel.deadLine] andStartDate:dateNowStr withDateFormat:@"yyyy.MM.dd HH:mm:ss"];
-    cell.cdTime.text = [NSString stringWithFormat:@"%@", cdTimeStr];
-    
-    NSString *iconPath = [[BankCardIconManager sharedManager] getBankIconPathWithName: dataModel.bankName];
-    DLog(@"iconPath = %@", iconPath);
-    cell.cardIcon.image = ImageName(iconPath);
-    
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    [cell setPayState:dataModel.payStatus andPaidNum:dataModel.partPayNum];
-    cell.billDetailButtonAction = ^(UIButton *button){
-        if (bScroll) {
-            return ;
-        }
-        DLog(@"billDetailButtonAction");
-//        BillDetailVC *billDetailVc = [[BillDetailVC alloc] init];
-//        billDetailVc.bankCardId = [NSString stringWithFormat:@"%@", dataModel.cardId];
-//        billDetailVc.bankCardInfo = dataModel;
-//        [self.navigationController pushViewController:billDetailVc animated:YES];
-    };
-    
-    cell.getPayState = ^(NSInteger paystate, CGFloat partPayNUmber){
-        [self setPayState:[NSString stringWithFormat:@"%ld", paystate] andPaidMoney:[NSString stringWithFormat:@"%0.2f", partPayNUmber] andBIllId:dataModel.billId];
-        dataModel.partPayNum = [NSString stringWithFormat:@"%0.2f", partPayNUmber];
-        dataModel.payStatus = [NSString stringWithFormat:@"%ld", paystate];
-        [[DBManager sharedDBManager] updateBankCardListData:dataModel];
-    };
-    
-    if (bScroll) {
-        cell.payButtonView.userInteractionEnabled = NO;
-        cell.contentView.userInteractionEnabled = NO;
-    }
-    
-    [self setNextBilldateCDDays:cell data:dataModel];
-}
 
-- (void)setNextBilldateCDDays:(UITableViewCell*)cell data:(BankCardListDataModel *)dataModel {
+- (void)setNextBilldateCDDays:(MyCardTableViewCell*)cell data:(BankCardListDataModel *)dataModel {
     if ([dataModel.period isEqual:[NSNull class]] || [dataModel.period isEqualToString:@"<null>"]) {
         return;
     }
@@ -629,11 +533,10 @@
     NSDate *mDate = [calender dateByAddingComponents:comps toDate:billdate options:0];
     
     NSString *cdDays = [ToolBox getDaysBetweenEndDate:mDate.description andStartDate:[NSDate date].description withDateFormat:@"yyyy-MM-dd HH:mm:ss z"];
-    MyCardTableViewCell *currCell = (MyCardTableViewCell *)cell;
-    currCell.leftDaysToNextBillDay.text = [NSString stringWithFormat:@"%@", cdDays];
+    cell.leftDaysToNextBillDay.text = [NSString stringWithFormat:@"%@", cdDays];
 }
 
-- (void)setProtectionCardCellData:(ProtectionCardCell*)cell data:(BankCardListDataModel *)dataModel scrollViewCell:(BOOL)bScroll {
+- (void)setProtectionCardCellData:(MyProtectionCell*)cell data:(BankCardListDataModel *)dataModel scrollViewCell:(BOOL)bScroll {
     cell.title.text = [NSString stringWithFormat:@"%@", dataModel.bankName];
     cell.servicePeriod.text =  [NSString stringWithFormat:@"%@", dataModel.serviceCycle];
     NSMutableString *deadLine = [NSMutableString stringWithString:dataModel.endTime];
@@ -659,40 +562,6 @@
     }
     
     [cell setCardsInfo:dataModel.serviceCardList];   
-    cell.buyService = ^(){
-        if (bScroll) {
-            return;
-        }
-        [self buyService:dataModel];
-    };
-}
-
-- (void)setProtectionCardCell4Phone6Data:(ProtectionCardCell4Phone6*)cell data:(BankCardListDataModel *)dataModel scrollViewCell:(BOOL)bScroll {
-    cell.title.text = [NSString stringWithFormat:@"%@", dataModel.bankName];
-    cell.servicePeriod.text =  [NSString stringWithFormat:@"%@", dataModel.serviceCycle];
-    NSMutableString *deadLine = [NSMutableString stringWithString:dataModel.endTime];
-    [deadLine replaceOccurrencesOfString:@"-" withString:@"." options:NSWidthInsensitiveSearch range:NSMakeRange(0,10)];
-    cell.endTime.text = [NSString stringWithFormat:@"服务截止日期%@", [deadLine substringWithRange:NSMakeRange(5, 6)]];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    NSString *dateNowStr = [ToolBox getDateStringWithDate:[[NSDate date] description] dateFormat:@"yyyy-MM-dd HH:mm:ss z" destFormat:@"yyyy.MM.dd HH:mm:ss"];
-    NSString *cdTimeStr = [ToolBox getDaysBetweenEndDate:[NSMutableString stringWithString: dataModel.endTime] andStartDate:dateNowStr withDateFormat:@"yyyy.MM.dd HH:mm:ss"];
-    cell.CDTime.text = [NSString stringWithFormat:@"%@", cdTimeStr];
-    cell.operationButton.hidden = YES;
-    
-    if ([dataModel.serviceType integerValue]== 1) {
-        [cell.icon setImage:ImageName(@"diu-ka-bao-zhang@2x.png")];
-        
-    }else if([dataModel.serviceType integerValue]== 2) {
-        [cell.icon setImage:ImageName(@"dao-shua-bao-zhang-")];
-    }
-    else if([dataModel.serviceType integerValue]== 3) {
-        [cell.icon setImage:ImageName(@"iconfont-phoneService")];
-    }
-    else if([dataModel.serviceType integerValue]== 4) {
-        [cell.icon setImage:ImageName(@"pos-anniu")];
-    }
-    
-    [cell setCardsInfo:dataModel.serviceCardList];
     cell.buyService = ^(){
         if (bScroll) {
             return;
@@ -754,7 +623,7 @@
     if (![[AFNetManager sharedManager] checkNetStateWithTip:@"网络不好，请稍后再试"]) {
         return;
     }
-    
+    _changedPayState = state;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(billUpdateNotification:) name:BillUpdate object:nil];
     NSString *parameter = [NSString stringWithFormat:@"%@id=%@&status=%@&paid=%@",BillUpdate, billId, state, paid];
     [[AFNetManager sharedManager] getDataFromServerWithHostUrl:HostUrl andParameters:parameter andNotificationName:BillUpdate];
@@ -763,6 +632,11 @@
     NSDictionary *resultDic = [[NSDictionary alloc] initWithDictionary:notification.userInfo];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:BillUpdate object:nil];
     DLog(@"resultDic = %@", resultDic);
+    
+    if ([_changedPayState isEqualToString:@"1"]) {//状态为已还款
+        [self updateBillList];//重新请求数据，服务端把已还款的放到队列的最后显示
+    }
+   
 }
 
 - (ServiceInfoModel *)getServiceInfoModel:(NSDictionary *)serviceDict {
@@ -839,5 +713,4 @@
     }
     return serviceInfoModel;
 }
-
 @end

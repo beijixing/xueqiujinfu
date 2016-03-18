@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUSVC">
             <connections>
+                <outlet property="linkLabel" destination="fHb-jO-Uod" id="Ecz-to-oU0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,40 +57,40 @@
                                     <color key="textColor" red="0.94117647059999998" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雪球金服为您提供最专业的卡片服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-dB-Cxr">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雪球卡卡为您提供最专业的卡片服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-dB-Cxr">
                                     <rect key="frame" x="24" y="293" width="272" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="8Ht-cP-z1E"/>
                                         <constraint firstAttribute="width" constant="272" id="QcC-QP-Ow5"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版权所有" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58g-Iq-rE5">
-                                    <rect key="frame" x="68" y="496" width="185" height="29"/>
+                                    <rect key="frame" x="68" y="467" width="185" height="29"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="29" id="AwE-wA-e26"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ww.baidu.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6r-FC-176">
-                                    <rect key="frame" x="40" y="526" width="244" height="28"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xueqiujinfu@2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6r-FC-176">
+                                    <rect key="frame" x="40" y="490" width="244" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="28" id="JFK-oe-cTt"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随手理财网：http://www.xxxx.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-jO-Uod">
-                                    <rect key="frame" x="29" y="416" width="263" height="32"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随手理财网：http://www.xueqiujinfu.com/" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHb-jO-Uod">
+                                    <rect key="frame" x="2" y="416" width="317" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="32" id="WIQ-EA-9oX"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -99,7 +100,7 @@
                                         <constraint firstAttribute="width" constant="224" id="0zh-0L-pCy"/>
                                         <constraint firstAttribute="height" constant="24" id="Ott-fw-F86"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -109,7 +110,7 @@
                                         <constraint firstAttribute="width" constant="224" id="EKQ-HW-9JA"/>
                                         <constraint firstAttribute="height" constant="24" id="Obe-RZ-SEG"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -119,7 +120,7 @@
                                         <constraint firstAttribute="width" constant="224" id="H44-ck-Epy"/>
                                         <constraint firstAttribute="height" constant="24" id="udc-qL-v6P"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -136,14 +137,14 @@
                                 <constraint firstAttribute="trailing" secondItem="58g-Iq-rE5" secondAttribute="trailing" constant="67" id="MAs-V5-Ket"/>
                                 <constraint firstItem="ArJ-1X-O7x" firstAttribute="centerX" secondItem="7Sj-FP-dqg" secondAttribute="centerX" id="MEh-h4-md0"/>
                                 <constraint firstAttribute="trailing" secondItem="o6r-FC-176" secondAttribute="trailing" constant="36" id="QRF-Xr-lni"/>
-                                <constraint firstItem="fHb-jO-Uod" firstAttribute="leading" secondItem="7Sj-FP-dqg" secondAttribute="leading" constant="29" id="Sro-8S-U8d"/>
-                                <constraint firstItem="o6r-FC-176" firstAttribute="top" secondItem="58g-Iq-rE5" secondAttribute="bottom" constant="1" id="WZ3-Kf-5jt"/>
+                                <constraint firstItem="fHb-jO-Uod" firstAttribute="leading" secondItem="7Sj-FP-dqg" secondAttribute="leading" constant="2" id="Sro-8S-U8d"/>
+                                <constraint firstItem="o6r-FC-176" firstAttribute="top" secondItem="58g-Iq-rE5" secondAttribute="bottom" constant="-6" id="WZ3-Kf-5jt"/>
                                 <constraint firstItem="XsT-TR-fDW" firstAttribute="top" secondItem="luJ-aF-RUQ" secondAttribute="bottom" constant="8" id="ZYZ-7L-TWP"/>
                                 <constraint firstItem="luJ-aF-RUQ" firstAttribute="top" secondItem="ArJ-1X-O7x" secondAttribute="bottom" constant="8" id="av1-Mm-sc3"/>
-                                <constraint firstAttribute="bottom" secondItem="o6r-FC-176" secondAttribute="bottom" constant="14" id="bGM-fN-8W7"/>
+                                <constraint firstAttribute="bottom" secondItem="o6r-FC-176" secondAttribute="bottom" constant="50" id="bGM-fN-8W7"/>
                                 <constraint firstItem="tpT-dB-Cxr" firstAttribute="centerX" secondItem="7Sj-FP-dqg" secondAttribute="centerX" id="eRi-0h-k4B"/>
                                 <constraint firstItem="hsM-qn-OIg" firstAttribute="top" secondItem="Itt-M5-srE" secondAttribute="bottom" constant="2" id="f2J-OV-qLC"/>
-                                <constraint firstAttribute="trailing" secondItem="fHb-jO-Uod" secondAttribute="trailing" constant="28" id="gM5-NR-kuw"/>
+                                <constraint firstAttribute="trailing" secondItem="fHb-jO-Uod" secondAttribute="trailing" constant="1" id="gM5-NR-kuw"/>
                                 <constraint firstItem="ArJ-1X-O7x" firstAttribute="top" secondItem="7Sj-FP-dqg" secondAttribute="top" constant="45" id="gWZ-L2-c6H"/>
                                 <constraint firstItem="Dr0-vh-Doi" firstAttribute="top" secondItem="hsM-qn-OIg" secondAttribute="bottom" constant="1" id="h6s-Yh-Tr4"/>
                                 <constraint firstItem="58g-Iq-rE5" firstAttribute="leading" secondItem="7Sj-FP-dqg" secondAttribute="leading" constant="68" id="h9B-Z0-4PW"/>
@@ -175,6 +176,6 @@
         </view>
     </objects>
     <resources>
-        <image name="aboutus.png" width="227" height="234"/>
+        <image name="aboutus.png" width="231" height="237"/>
     </resources>
 </document>

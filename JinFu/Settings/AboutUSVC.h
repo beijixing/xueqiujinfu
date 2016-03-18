@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AboutUSVC : BaseViewController
-
-@property (strong, nonatomic) IBOutlet UITextView *contentTextView;
+@property (strong, nonatomic) IBOutlet UILabel *linkLabel;
 @end

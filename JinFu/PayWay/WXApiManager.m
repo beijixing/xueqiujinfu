@@ -87,7 +87,7 @@
 
 
 - (void)payOrderWithCost:(NSString*)cost subject:(NSString*)subject {
-    
+    return;
 //    //============================================================
 //    // V3&V4支付流程实现
 //    // 注意:参数配置请查看服务器端Demo

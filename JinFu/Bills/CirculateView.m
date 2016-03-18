@@ -70,6 +70,9 @@
 }
 
 - (void)tapAction:(UIGestureRecognizer *) gesture {
+    if (_dataArray.count == 0) {
+        return;
+    }
     if (self.delegate) {
         AdDataModel *adModle = [_dataArray objectAtIndex:_pageIndex];
         if (adModle && [self.delegate respondsToSelector:@selector(circulateViewClicked:)]) {

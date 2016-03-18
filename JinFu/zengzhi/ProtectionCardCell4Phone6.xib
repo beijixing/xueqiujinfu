@@ -49,6 +49,16 @@
                             <constraint firstAttribute="width" constant="1" id="F7H-vV-1Zd"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务截止日期11.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-4r-djt">
+                        <rect key="frame" x="82" y="43" width="129" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="UPl-3F-iic"/>
+                            <constraint firstAttribute="width" constant="129" id="hft-Dh-kJ4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfb-DS-nbu">
                         <rect key="frame" x="259" y="155" width="74" height="24"/>
                         <color key="backgroundColor" red="1" green="0.77111098499999997" blue="0.1165099164" alpha="1" colorSpace="calibratedRGB"/>
@@ -199,16 +209,6 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="服务截止日期11.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJr-4r-djt">
-                        <rect key="frame" x="82" y="42" width="129" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="UPl-3F-iic"/>
-                            <constraint firstAttribute="width" constant="129" id="hft-Dh-kJ4"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
